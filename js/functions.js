@@ -102,17 +102,22 @@ console.log(calculateTip(0.15, 33.42));// returns 5.013
  * then display the dollar amount they should tip
  */
 
-var bill = number(prompt("What is your bill?));
-var tipPercent = number(prompt("What do you want to tip?));
+// var bill = number(prompt("What is your bill?));
+// var tipPercent = number(prompt("What do you want to tip?));
+//
+//
+// var calculateTip = number(prompt( bill * tipPercent);
+//
+//
+// var totalPay = (calculateTip) + (bill);
+//
+// var alertMessage = "Your total pay is:$" + totalPay;
+// alert(alertMessage);
 
-
-var calculateTip = number(prompt( bill * tipPercent);
-
-
-var totalPay = (calculateTip) + (bill);
-
-var alertMessage = "Your total pay is:$" + totalPay;
-alert(alertMessage);
+var tipPercentage = parseFloat(prompt("What percentage would you like to tip? 0.00 to 1.00?"));
+var billTotal=prompt("What is the total for your bill?");
+var amountToTip=calculateTip(tipPercentage, billTotal);
+console.log("Leave $ "+ amountToTip +"as a tip");
 
 
 
@@ -123,10 +128,21 @@ alert(alertMessage);
  * and 1). It should return the result of applying the discount to the original
  * price.
  *
- * Example:
- * > var originalPrice = 100;
- * > var dicountPercent = .2; // 20%
+ // * Example:
+ // var originalPrice = 100;
+ var dicountPercent = .2; // 20%
  * > applyDiscount(originalPrice, dicountPercent) // 80
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+var orginalPrice = 100;
+var discountPercentage = .2;
+var discountAmount = price * discountPercentage;
+
+function applyDiscount(originalPrice, discountPercentage){
+    return originalPrice - (discountPercentage * originalPrice);
+}
+console.log(applyDiscount());
+
+

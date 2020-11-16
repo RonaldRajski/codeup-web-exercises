@@ -90,3 +90,15 @@ for (var i =100; i >3; i --){
 //     else if (i % 5 == 0) console.log("Buzz");
 //     else console.log(i);
 // }
+
+// Practice Multiplication table
+
+function showMultiplicationTable2(num){
+
+    for(var i = 1; i <= 10; i++){
+        let a = (num * i);
+        // console.log(`${num} x ${i} = ${a}`);
+        console.log(num + " x " + i + " = " + a);
+    }
+}
+showMultiplicationTable2(2);

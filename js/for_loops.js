@@ -102,3 +102,7 @@ function showMultiplicationTable2(num){
     }
 }
 showMultiplicationTable2(2);
+
+for(var count4 =1; count4 <10; count4++){
+    console.log((count4.toString().repeat(count4)));
+}

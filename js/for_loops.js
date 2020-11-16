@@ -67,6 +67,22 @@ else if(i % 5 === 0){
 else console.log(i);
 }
 
+// decrement 100 Codeup 4, 5 20
+
+for (var i =100; i >3; i --){
+    if(i % 20 === 0){
+        console.log("Codeup");
+    }
+    else if(i % 5 === 0){
+        console.log("Code");
+    }
+    else if(i % 4 === 0){
+        console.log("up");
+    }
+    else
+        console.log(i);
+}
+
 
 // for (var i=1; i < 101; i++){
 //     if (i % 15 == 0) console.log("FizzBuzz");

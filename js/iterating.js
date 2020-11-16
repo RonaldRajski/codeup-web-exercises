@@ -45,6 +45,10 @@
      */
     names.forEach(element => console.log(element));
 
+    names.forEach(function (name){
+        console.log(name);
+    })
+
 
     /**
      * TODO:
@@ -62,22 +66,38 @@
 
     var arrNumbers = [1,2,3,4,5];
 
-    var first =function first(arr){
+    var first =function (arr){
         console.log(arrNumbers[0]);
     }
     first();
 
-     var second = function second(arr){
+    function first(array){
+        return array[0];
+    }
+
+    console.log(first(names));
+
+    var second = function(arr){
          console.log(arrNumbers[1]);
      }
     second();
 
-    var last = function last(arr){
+    function second(arr){
+        return array[1];
+    }
+
+    console.log(second(names));
+
+    var last = function (arr){
         console.log(arrNumbers[arrNumbers.length -1]);
     }
     last();
 
+    function last(arr){
+        return array[array.length -1]
+    }
 
+    console.log(last(names));
 
 
 })();

@@ -35,7 +35,8 @@
     console.log(planets)
 
     console.log('Finding and logging the index of "Earth" in the planets array.');
-    console.log(planets.indexOf("Earth"));
+    var indexOfEarth = planets.indexOf("Earth");
+    console.log(indexOfEarth);
 
 
     console.log("Reversing the order of the planets array.");
@@ -43,4 +44,29 @@
 
     console.log("Sorting the planets array.");
     console.log(planets.sort());
+
+    console.log("Extra Practice");
+
+
+    for (var i=1; i <= 100; i++)
+    {
+        if (i % 15 == 0)
+            console.log("FizzBuzz");
+        else if (i % 3 == 0)
+            console.log("Fizz");
+        else if (i % 5 == 0)
+            console.log("Buzz");
+        else
+            console.log(i);
+    }
+
+    var planetsString = "Mercury|Venus|Earth|Jupiter";
+    var planetsArray = planetsString
+        .split;
+
+
+
+
+
+
 })();

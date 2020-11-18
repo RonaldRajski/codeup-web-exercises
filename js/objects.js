@@ -16,12 +16,12 @@
     var person = {
         firstName:"Ronald",
         lastName:"Rajski"
-    };
+    }
 
 
 
-    console.log(person.firstName); // "Rick"
-    console.log(person.lastName); // "Sanchez"
+    console.log(person.firstName); // "Ronald"
+    console.log(person.lastName); // "Rajski"
 
 
 
@@ -36,8 +36,10 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 
+
+    // redone with this.name
     person.sayHello = function (){
-        return "Hello from " + person.firstName + " " + person.lastName + "!";
+        return "Hello from " + this.firstName + " " + this.lastName + "!";
     }
 
     console.log(person.sayHello());
@@ -55,18 +57,18 @@
      * and console.log the relevant messages for each person
      */
 
-    function cost(shopper){
-        console.log(shopper.name);
-        console.log("Spent: $" + shopper.amount);
-            if(shopper.amount >200){
-                console.log(shopper.amount * .12);
-                console.log(`Total of: ${shopper.amount - shopper.amount * .12}`);
-            }
-            else {
-                console.log("no discount");
-                console.log(shopper.amount);
-            }
-    }
+    // function cost(shopper){
+    //     console.log(shopper.name);
+    //     console.log("Spent: $" + shopper.amount);
+    //         if(shopper.amount >200){
+    //             console.log(shopper.amount * .12);
+    //             console.log(shoppers.name + `Total of: ${shopper.amount - shopper.amount * .12}`);
+    //         }
+    //         else {
+    //             console.log("no discount");
+    //             console.log(shopper.amount);
+    //         }
+    // }
 
 
     var shoppers = [
@@ -77,18 +79,20 @@
 
 
         shoppers.forEach(function (shopper) {
-        var discount = 0;
         if (shopper.amount > 200) {
-            discount = shopper.amount * .12;
-            var total = shopper.amount - discount;
-
 
             console.log(shopper.name + "'s bill was $" + shopper.amount + ".They received a discount of $" + discount +
                 "and their total was $" + total + ".");
 
         }
+        else{
+                console.log("Howdy there " + shopper.name + "! Your total before any discounts is $" +shopper.amount.toFixed(2) +
+                    "today is $" + shoper.amount.toFixed(2)+ ".");
+            }
 
-    })
+        })
+
+// console.log("Howdy there " + shopper.name + "!Your total before any discounts is $" + shopper.amount.toFixed(2) + ".Since that's over $200 , you            will be receiving a 12% discount, meaning your final total today is $" + shopper.amount.toFixed(2) + ".");
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -102,6 +106,19 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+    function addBook(title, fName, lName, booksArr) {
+        var obj = {
+            title: title,
+            author: {
+                firstName = fName,
+                lastName = lName
+            }
+
+        };
+        Books.Arr.push(obj);
+        return booksArr;
+    }
 
     var books = [
         {
@@ -143,12 +160,18 @@
 
     ];
 
-    function library(){
-        for (var i = 1; i <books.length; i++) {
-            console.log(this.title + " " + this.author.firstName + " "+
-            this.author.lastName);
-        }
+    addBook("The Art of War", "Sun", "Tzu", books);
+
+    books.forEach(function (book){
+        console.log("Book #" + (index + 1) +"\n" +showBookInfo(book));
     }
+
+    // function library(){
+    //     for (var i = 1; i <books.length; i++) {
+    //         console.log(this.title + " " + this.author.firstName + " "+
+    //         this.author.lastName);
+    //     }
+    // }
 
 
 
@@ -186,6 +209,12 @@
      *      ...
      */
 
+    function showBookInfo(book){
+        var str ="Title: "+book.title + "\n";
+        str += "Author: " + book.author.firstName + " " + book.author.lastName;
+        return str;
+    }
+
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -211,5 +240,10 @@
 
     const book1 = createBook("book_one", "sci-fi", "Ibas Majid")
     const book2 = createBook("book_two", "fantasy", "Alice M.")
+
+
+
+
+
 
 })();

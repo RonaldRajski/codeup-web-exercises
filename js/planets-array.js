@@ -64,9 +64,4 @@
     var planetsArray = planetsString
         .split;
 
-
-
-
-
-
 })();

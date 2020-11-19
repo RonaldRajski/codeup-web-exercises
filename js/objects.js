@@ -110,7 +110,7 @@
     function addBook(title, fName, lName, booksArr) {
         var obj = {
             title: title,
-            author: {
+            author : {
                 firstName = fName,
                 lastName = lName
             }

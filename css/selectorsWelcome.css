@@ -1,0 +1,100 @@
+/* selector for id="container" */
+.fancy-header {
+    margin: 50px auto;
+    width: 500px;
+    padding: 10px;
+    color:purple;
+    text-decoration: underline;
+
+
+
+}
+h1 {
+    text-align: center;
+}
+
+/*h1{*/
+/*    @keyframes fadein {*/
+/*        opacity: 0;*/
+/*    }to {*/
+/*    opacity: 1;*/
+/*         }*/
+/*}*/
+/*}*/
+/*set background color for whole page*/
+h2 {
+    color: blue;
+    text-decoration: underline;
+}
+
+body{
+    background-image: url("../img/moroccan-flower.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Yeon Sung', cursive;
+}
+#products{
+    margin:auto;
+    align-content: center;
+}
+
+#product-table{
+    text-align: center;
+}
+
+/* selector for all "em" elements */
+em{
+    font-weight: bold;
+}
+body{
+    background-color: lightpink;
+}
+
+/* list-style to something other than the default bullet.
+
+ */
+ul{
+    list-style-type: circle;
+}
+
+body{
+    font-family: "Comic Sans MS";
+}
+
+table, td, tr {
+    font-size: 20px;
+    font-size: 2em;
+    padding: 10px;
+}
+
+
+/* unvisited link*/
+a:link {
+    color: red;
+}
+
+/* visited link */
+a:visited {
+    color: green;
+}
+
+/* mouse over link */
+a:hover {
+    color: black;
+}
+
+/* selected link */
+a:active {
+    color: blue
+}
+
+/* selector for all elements with class="article" */
+.article{
+    clear:both;
+}
+
+/*  selector for all "anchor" elements
+    that are a direct child of an element with class="article" */
+.article>a {
+    float:right;
+}

@@ -13,7 +13,6 @@ main {
     grid-gap: 1em;
     grid-template-columns: 1fr;
 
-    background-color: navy;
 }
 @media (min-width: 800px) {
     main { grid-template-columns: repeat(2, 1fr);
@@ -21,6 +20,24 @@ main {
     }
     #codeupValues { grid-column: 1 / span 2; }
 }
+
+#myAnswer {
+    color: navy;
+    background-color: gold;
+}
+#myAnswer2{
+    color: maroon;
+    background-color: white;
+}
+#myAnswer3{
+    color: purple;
+    background-color: aqua;
+}
+#myAnswer4{
+    color: aquamarine;
+    color: coral;
+}
+
 @media (min-width: 1600px) {
     main { grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 1fr 2fr;

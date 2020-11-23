@@ -1,0 +1,17 @@
+body{
+    background-color: aquamarine;
+}
+#outerbox{
+    height: 266px;
+    background-color: #3e8e41;
+    padding: 15px
+
+}
+
+#innerbox{
+    /*where the text is*/
+    height 100%
+    padding: 25px;
+    background-color: indianred;
+    margin: 15px;
+}

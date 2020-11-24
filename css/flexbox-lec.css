@@ -24,8 +24,13 @@ div.main {
 #box-container-1 {
     /* This is where I'll declare the display: flex for all the inner boxes */
     /* TODO: Set up display to be flex */
+    display: flex;
+    /*row is default*/
+    flex-direction: row;
     width: 100%;
     /* TODO: Set up flex wrapping */
+    flex-wrap: wrap;
+    /*default wrap value is wrap*/
     margin-bottom: 30px;
 }
 div.single-box {
@@ -33,7 +38,17 @@ div.single-box {
     width: 200px;
     height: 200px;
     /* TODO: Center text horizontally (main axis) */
+    justify-content: center;
     /* TODO: Center text vertically  (cross axis) */
+    text-align: center;
+
+    /*!*justify-content   Justify === main axis*! content = squad*/
+    /*!*justify-items*! single person*/
+    /*align-content     align cross axis*/
+    /*align-items */
+
+
+
     font-size: 2em;
     margin-bottom: 10px;     /*  Little space beneath each of the boxes */
     cursor: pointer;         /*  Make it pretty when we mouseover       */

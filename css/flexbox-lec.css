@@ -80,6 +80,12 @@ div.single-box {
     /* TODO: Set up flex properties for this container */
     height: 400px;
     margin-bottom: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+
 }
 #box-container-3 div.single-box {
     height: auto;
@@ -92,6 +98,8 @@ div.single-box {
 #box-container-4 {
     /* TODO: Declare the display to be flex */
     /* TODO: Set up flex properties for this container */
+display: flex;
+    justify-content: space-evenly;
 
     /*height: 450px;         !* Only using this to show align-items at large resolutions *!*/
 }

@@ -92,7 +92,7 @@ for(var i = 1; i < 10; i+=2){
 }
 // 86
 // Setup
-var myArray = [];
+let myArray = [];
 
 // Only change code below this line
 // Counting down odds for loop
@@ -100,13 +100,53 @@ for(var i = 9; i>0; i -=2){
     myArray.push(i);
 }
 // Setup
-var myArr = [ 2, 3, 4, 5, 6];
+let myArr = [ 2, 3, 4, 5, 6];
 
 // Only change code below this line
 // 87% complete
 // Find the total of the array
-var total = 0;
+let total = 0;
 for (var i = 0; i < myArr.length; i++ ){
     total += myArr[i];
 }
+// 88
+function multiplyAll(arr) {
+    var product = 1;
+    // Only change code below this line
+    for(var i =0; i< arr.length; i++){
+        for (var j=0; j < arr[i].length; j++){
+            product = product * arr[i][j];
 
+        }
+    }
+
+    // Only change code above this line
+    return product;
+}
+
+multiplyAll([[1,2],[3,4],[5,6,7]]);
+
+// 90
+
+// Setup do-while
+var myArray = [];
+var i = 10;
+
+// Only change code below this line
+do{
+    myArray.push(i);
+    i++;
+}
+while (i <=10);
+
+// 90
+function sum(arr, n) {
+    // Only change code below this line
+    if (n <= 0) {
+        return 0;
+    } else {
+        return sum(arr, n - 1) + arr[n - 1];
+    }
+
+    // Only change code above this line
+}

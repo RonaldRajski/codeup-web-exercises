@@ -6,6 +6,139 @@ body {
     font-family: "Nunito Sans", SansSerif;
     min-height: 100vh;
 }
+
+nav{
+    background: #333333;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-family: Verdana;
+    display: inline-block;
+    /*expands clickable area**/
+    padding: 1em;
+}
+
+nav a:hover {
+    background: black;
+}
+
+nav ul li:nth-child(4){
+    margin-left: auto;
+
+}
+
+
+body {
+    margin: 0;
+    font-family: Roboto;
+    background: orange;
+}
+h1, h2, h3 {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+h3 {
+    color: grey;
+}
+hr {
+    border-top: 1px solid whitesmoke;
+    width: 90px;
+}
+.container{
+    display: flex;
+}
+.card {
+    margin: .5em;
+    border-radius: 2px;
+    background: white;
+    width: 250px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+img {
+    border-radius: 120px;
+    width: 120px;
+}
+
+i {
+    color: grey;
+}
+
+.icons {
+    width: 160px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.text-section {
+    position: relative;
+    bottom: 1.5em;
+}
+
+.icons i {
+    font-size: 2.2em;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto;
+    background: orange;
+}
+h1, h2, h3 {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+h3 {
+    color: grey;
+}
+hr {
+    border-top: 1px solid whitesmoke;
+    width: 90px;
+}
+.card {
+    margin: .5em;
+    border-radius: 2px;
+    background: white;
+    width: 250px;
+    height: 350px;
+}
+img {
+    border-radius: 120px;
+    width: 120px;
+}
+i {
+    color: grey;
+}
+.text-section {
+    position: relative;
+    bottom: 1.5em;
+}
+.icons i {
+    font-size: 2.2em;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: "Nunito Sans", SansSerif;
+    min-height: 100vh;
+}
+
 footer {
     background: black;
     position: absolute;

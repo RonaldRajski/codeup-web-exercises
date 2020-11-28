@@ -188,3 +188,168 @@ function lookUpProfile(name, prop){
 }
 
 lookUpProfile("Akira", "likes");
+
+// Setup
+var contacts = [
+    {
+        "firstName": "Akira",
+        "lastName": "Laine",
+        "number": "0543236543",
+        "likes": ["Pizza", "Coding", "Brownie Points"]
+    },
+    {
+        "firstName": "Harry",
+        "lastName": "Potter",
+        "number": "0994372684",
+        "likes": ["Hogwarts", "Magic", "Hagrid"]
+    },
+    {
+        "firstName": "Sherlock",
+        "lastName": "Holmes",
+        "number": "0487345643",
+        "likes": ["Intriguing Cases", "Violin"]
+    },
+    {
+        "firstName": "Kristian",
+        "lastName": "Vos",
+        "number": "unknown",
+        "likes": ["JavaScript", "Gaming", "Foxes"]
+    }
+];
+
+
+function lookUpProfile(name, prop){
+// Only change code below this line
+    for (var x = 0; x < contacts.length; x++){
+        if (contacts[x].firstName === name){
+            if (contacts[x].hasOwnProperty(prop)){
+                return contacts[x][prop];
+            }else {
+                return "No such property";
+            }
+        }
+    }
+
+    return "No such contact";
+
+// Only change code above this line
+}
+
+lookUpProfile("Akira", "likes");
+
+function randomWholeNum() {
+
+    // Only change code below this line
+
+    return Math.floor(Math.random()*10);
+}
+
+// ****************
+function randomRange(myMin, myMax) {
+    // Only change code below this line
+    return Math.floor(Math.random() * (myMax - myMin + 1) + myMin);
+    // Only change code above this line
+}
+
+// Basic JavaScript: Use the parseInt Function
+// The parseInt() function parses a string and returns an integer. Here's an example:
+//
+// var a = parseInt("007");
+//
+// The above function converts the string "007" to an integer 7. If the first character in the string can't be converted into a number, then it returns NaN.
+//
+// Use parseInt() in the convertToInteger function so it converts the input string str into an integer, and returns it.
+
+function convertToInteger(str) {
+    return parseInt(str);
+}
+
+convertToInteger("56");
+
+// Basic JavaScript: Use the parseInt Function with a Radix
+// The parseInt() function parses a string and returns an integer. It takes a second argument for the radix, which specifies the base of the number in the string. The radix can be an integer between 2 and 36.
+//
+// The function call looks like:
+//
+//     parseInt(string, radix);
+//
+// And here's an example:
+//
+// var a = parseInt("11", 2);
+//
+// The radix variable says that "11" is in the binary system, or base 2. This example converts the string "11" to an integer 3.
+//
+// Use parseInt() in the convertToInteger function so it converts a binary number to an integer and returns it.
+
+function convertToInteger(str) {
+    return parseInt(str, 2);
+}
+
+convertToInteger("10011");
+
+// The conditional operator, also called the ternary operator, can be used as a one line if-else expression.
+//
+//     The syntax is:
+//
+//     condition ? expression-if-true : expression-if-false;
+//
+// The following function uses an if-else statement to check a condition:
+//
+//     function findGreater(a, b) {
+//         if(a > b) {
+//             return "a is greater";
+//         }
+//         else {
+//             return "b is greater";
+//         }
+//     }
+// This can be re-written using the conditional operator:
+//
+//     function findGreater(a, b) {
+//         return a > b ? "a is greater" : "b is greater";
+//     }
+// Use the conditional operator in the checkEqual function to check if two numbers are equal or not. The function should return either "Equal" or "Not Equal".
+
+function checkEqual(a, b) {
+    return a === b ? "Equal" : "Not Equal";
+}
+
+checkEqual(1, 2);
+
+In the previous challenge, you used a single conditional operator. You can also chain them together to check for multiple conditions.
+
+    The following function uses if, else if, and else statements to check multiple conditions:
+
+    function findGreaterOrEqual(a, b) {
+        if (a === b) {
+            return "a and b are equal";
+        }
+        else if (a > b) {
+            return "a is greater";
+        }
+        else {
+            return "b is greater";
+        }
+    }
+// The above function can be re-written using multiple conditional operators:
+//
+//     function findGreaterOrEqual(a, b) {
+//         return (a === b) ? "a and b are equal"
+//             : (a > b) ? "a is greater"
+//                 : "b is greater";
+//     }
+// It is considered best practice to format multiple conditional operators such that each condition is on a separate line, as shown above. Using multiple conditional operators without proper indentation may make your code hard to read. For example:
+//
+//     function findGreaterOrEqual(a, b) {
+//         return (a === b) ? "a and b are equal" : (a > b) ? "a is greater" : "b is greater";
+//     }
+// In the checkSign function, use multiple conditional operators - following the recommended format used in findGreaterOrEqual - to check if a number is positive, negative or zero. The function should return "positive", "negative" or "zero".
+
+function checkSign(num) {
+    return (num >0) ? "positive" : (num<0) ? "negative" : "zero";
+}
+
+
+checkSign(10);
+
+

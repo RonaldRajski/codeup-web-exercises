@@ -2,9 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Jquery class</title>
+    <script src="js/JQuery%20v3.5.1.js"></script>
+    <script>
+        $("document").ready(function () {
+
+            // $("h1").append("");
+
+            $("h1:first").css("border", "3px dotted green");
+
+
+
+            $("h1:last").css("border", "4px dotted red")
+
+            // Replace
+
+            var newText = $("<p>");
+
+            newText.append("<h1>I just replaced something</h1>");
+
+            $("#textbox").html(newText)
+
+
+
+
+        });
+
+
+    </script>
+
 </head>
 <body>
+<h1>Jquery Class</h1>
+
+<h1 id="header">I love JQuery.2</h1>
+
+<h1 class="fancy-header">I love JQuery.3</h1>
+
+<h1>I love JQuery.4</h1>
+
+    <div id="textbox">
+
+        Lorem ipsum dolor sit amet, consectetur        adipisicing elit. Accusamus aliquid            consequuntur corporis, enim nam               numquam pariatur quasi quis vel         voluptates?
+
+    </div>
 
 </body>
 </html>

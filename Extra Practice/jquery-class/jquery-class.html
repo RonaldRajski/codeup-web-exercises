@@ -7,21 +7,64 @@
     <script>
         $("document").ready(function () {
 
-            // $("h1").append("");
+            // // $("h1").append("");
+            //
+            // $("h1:first").css("border", "3px dotted green");
+            //
+            //
+            //
+            // $("h1:last").css("border", "4px dotted red")
+            //
+            // // Replace
+            //
+            // var newText = $("<p>");
+            //
+            // newText.append("<h1>I just replaced something</h1>");
+            //
+            // $("#textbox").html(newText)
+            //
+            $("#textbox").on("click", whenMouseIsClicked);
 
-            $("h1:first").css("border", "3px dotted green");
+            // $("p").on.mouseenter("mouse leave", whenMouseLeaves);
+
+            // function whenMouseIsClicked(){
+            //     $("#textbox").html("<h4>You Clicked Me</h4>");
+            //
+            // }
+            //
+            // $("p").mouseenter(function (){
+            //     $("p").css("background-color", "yellow");
+            // });
+            // $("p").mouseleave(function (){
+            //     $("p").css("background-color", "lightgray");
+            //
+            //     });
+
+            // showhide
+
+            $("#hide").click(function(){
+                $("#para").hide();
+            });
+
+            $("#show").click(function(){
+                $("#para").show();
+            });
+
+            $('#codeup').hover(
+                function() {
+                    $(this).css('background-color', '#FF0');
+                },
+                function() {
+                    $(this).css('background-color', '#FFF');
+                }
+            );
 
 
 
-            $("h1:last").css("border", "4px dotted red")
 
-            // Replace
 
-            var newText = $("<p>");
 
-            newText.append("<h1>I just replaced something</h1>");
 
-            $("#textbox").html(newText)
 
 
 
@@ -40,22 +83,41 @@
         background-color: aliceblue;
 
     }
+
+    #textbox2{
+        /*display: none;*/
+    }
     </style>
 </head>
 <body>
-<h1>Jquery Class</h1>
+<!--<h1>Jquery Class</h1>-->
 
-<h1 id="header">I love JQuery.2</h1>
+<!--<h1 id="header">I love JQuery.2</h1>-->
 
-<h1 class="fancy-header">I love JQuery.3</h1>
+<!--<h1 class="fancy-header">I love JQuery.3</h1>-->
 
-<h1>I love JQuery.4</h1>
+<!--<h1>I love JQuery.4</h1>-->
 
-    <div id="textbox">
+<!--    <div id="textbox">-->
 
-        Lorem ipsum dolor sit amet, consectetur        adipisicing elit. Accusamus aliquid            consequuntur corporis, enim nam               numquam pariatur quasi quis vel         voluptates?
+<!--        Lorem ipsum dolor sit amet, consectetur        adipisicing elit. Accusamus aliquid            consequuntur corporis, enim nam               numquam pariatur quasi quis vel         voluptates?-->
+
+<!--    </div>-->
+
+
+
+    <div ID="textbox2">
+
+<a href="#" id="show">Click to show</a> || <a href="#" id="hide">Click to hide</a>
+    <p id="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga id nesciunt porro. Cupiditate doloribus eligendi ex impedit modi molestias possimus.</p>
+
+    </div>
+
+    <div >
+        <p id="codeup">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum ducimus eius eos explicabo iusto minus odio ratione tempore voluptatum.</p>
 
     </div>
 
 </body>
+
 </html>

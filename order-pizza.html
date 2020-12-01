@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title><!-- TODO: put your title here --></title>
+  <title><!-- Order Pizza Rajski --></title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <!-- Your custom css styles go here -->
   <link rel="stylesheet" href="css/custom.css">
@@ -21,6 +21,611 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 <!-- Your custom JS goes here -->
 </body>
+
+<!--XXXXXXXXXXXXXXXX  navbar start-->
+
+<div class="container">
+</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Pizza world</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Order online<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Menu</a>
+      <li class="nav-item">
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Zip Code" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search stores near you!</button>
+        </form>
+
+
+      </li>
+      <!--            <li class="nav-item dropdown">-->
+      <!--                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+      <!--                    Dropdown-->
+      <!--                </a>-->
+      <!--                <div class="dropdown-menu" aria-labelledby="navbarDropdown">-->
+      <!--                    <a class="dropdown-item" href="#">Order online</a>-->
+      <!--                    <a class="dropdown-item" href="#">Menu</a>-->
+      <!--                    <div class="dropdown-divider"></div>-->
+      <!--                    <a class="dropdown-item" href="#">Something else here</a>-->
+      <!--                </div>-->
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Sign up</a>
+      </li>
+      <!--            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
+    </form>
+  </div>
+</nav>
+</div>
+
+
+
+
+
+
+
+
+<!--XXXXXXXXXXXXXXXXXXXXX Navbar end-->
+
+<!--direction #2 says to put the rest of the site in a container-->
+
+<container>
+
+
+  <!--JUMBOTRON WRAPPED IN A CONTAINER-->
+
+  <div class="container">
+
+
+    <div class="jumbotron d-sm-none d-md-block">
+      <div class="container" id="main-container">
+<!--        <img src="img/pizza.png">-->
+        <h1 class="display-4">Welcome to Pizza World!</h1>
+        <hr class="my-4">
+
+      </div>
+    </div>
+  </div>
+
+  <!--tabs 1 -->
+
+
+
+  <div class="card">
+    <h2>Build your own Pizza!</h2>
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><span class="badge badge-pill badge-secondary">1</span> Size and Crust</a>
+      </li>
+      <li class="nav-item">
+
+
+
+        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><span class="badge badge-pill badge-secondary">2</span> Cheese and Sauce</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false"><span class="badge badge-pill badge-secondary">3</span>Toppings</a>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <!--        tab size and crust-->
+      <div class="card text-center">
+        <div class="card-header bg-primary text-white">
+           <p class= "crusty">Choose size and crust</p>
+        </div>
+        <div class="card-body">
+          <div class="tab-pane fade show active" id="home2" role="tabpanel" aria-labelledby="home-tab">.
+            <div class="card" style="width: 18rem;">
+              <div class="card-header">
+                Hand tossed
+              </div>
+              <li class="list-group list-group-flush">
+              <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste</li>
+              <li class="list-group-item">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="HtSmallRadio" id="HtSmallRadio" value="option1" checked>
+                  <label class="form-check-label" for="HtSmallRadio">
+                    Small(10")
+                  </label>
+                </div></li>
+              <li class="list-group-item">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="HtMediumRadio" value="option2">
+                  <label class="form-check-label" for="HtMediumRadio">
+                    Medium(12")
+                  </label>
+                </div></li>
+              </ul>
+            </div>
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">.
+              <div class="card" style="width: 18rem;">
+                <div class="card-header">
+                  Crispy Thin
+                </div>
+                <li class="list-group list-group-flush">
+                <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>
+                <li class="list-group-item">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="thinMedium" value="option1" checked>
+                    <label class="form-check-label" for="thinMedium">
+                      Medium(12")
+                    </label>
+                  </div></li>
+                <li class="list-group-item">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="thinLarge" value="option2">
+                    <label class="form-check-label" for="thinLarge">
+                      Large (14")
+                    </label>
+                  </div></li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-footer text-muted text-right">
+              <a href="#" class=" btn btn-primary"> Next Step></a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+          <!--&lt;!&ndash;            tab cheese and sauce&#45;&#45; need drop downs!!!-->
+          <div class="card text-center">
+            <div class="card-header bg-primary text-white">
+              Choose Cheese and Sauce
+            </div>
+            <div class="card-body">
+              <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">.
+                <div class="card" style="width: 100%;">
+                  <div class="card-header">
+                    Cheese
+                  </div>
+                  <li class="list-group list-group-flush">
+                  <li class="list-group-item">How Much?</li>
+                  <li class="list-group-item">
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1"></label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                              <option>Light</option>
+                              <option>Normal</option>
+                              <option>Extra</option>
+                              <option>Double</option>
+                            </select>
+
+                          <div class="card-header">
+                            Sauce
+                          </div>
+                  <li class="list-group list-group-flush text-left">
+                  <li class="list-group-item">What Type?</li>
+                  <li class="list-group-item">
+                    <div class="form-group">
+                      <label for="exampleFormControlSelect1"></label>
+                      <select class="form-control" id="exampleFormControlSelect1">
+                        <option> Robust Inspired Tomato Sauce</option>
+                        <option>Marinara Sauce</option>
+                        <option>BBQ Sauce</option>
+                        <option>Alfredo Sauce</option>
+                      </select>
+
+                  <li class="list-group list-group-flush">
+                  <li class="list-group-item">How Much?</li>
+                  <li class="list-group-item">
+                    <div class="form-group">
+                      <label for="exampleFormControlSelect1"></label>
+                      <select class="form-control" id="exampleFormControlSelect1">
+                        <option>Light</option>
+                        <option>Normal</option>
+                        <option>Extra</option>
+                        <option>Double</option>
+                      </select>
+
+
+
+                        </div>
+                      </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </ul>
+                </div>
+              </div>
+              <div class="card-footer text-muted">
+                <a href="#" class="btn btn-primary text-right"> < Previous Step</a>
+                <a href="#" class="btn btn-primary text-right">  Next Step ></a>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="card text-left">
+            <div class="card-header bg-primary text-white
+">Choose toppings
+            </div>
+            <div class="card-body">
+              <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">.
+                <div class="card" style="width: 18rem;">
+                  <div class="card-header">
+                    Choose Meats
+                  </div>
+                  <li class="list-group list-group-flush">
+                  <li class="list-group-item"></li>
+                  <li class="list-group-item">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="Beef" id="defaultCheck1" value="option1" checked>
+                      <label class="form-check-label" for="exampleRadios1">
+                        Beef
+                      </label>
+                    </div></li>
+                  <li class="list-group-item">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="Ham" id="Ham" value="option1">
+                      <label class="form-check-label" for="exampleRadios2">
+                        Ham
+                      </label>
+                    </div></li>
+                  <li class="list-group-item">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="PhillyCheese" id="Philly Cheese" value="option3">
+                      <label class="form-check-label" for="exampleRadios2">Philly Cheese
+                      </label>
+                    </div></li>
+                  <li class="list-group-item">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="Bacon" id="Bacon" value="option4">
+                      <label class="form-check-label" for="exampleRadios2">
+                        Bacon
+                      </label>
+                    </div></li>
+
+                  </ul>
+                </div>
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">.
+                  <div class="card" style="width: 18rem;">
+                    <div class="card-header">
+                      Choose Non-Meats
+                    </div>
+                    <li class="list-group list-group-flush">
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="exampleRadios" id="Green Peppers" value="option1" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                          Green Peppers
+                        </label>
+                      </div></li>
+                    <li class="list-group-item">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="exampleRadios" id="Mushrooms" value="option2">
+                        <label class="form-check-label" for="exampleRadios2">
+                          Mushrooms
+                        </label>
+                      </div></li>
+                    <li class="list-group-item">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="exampleRadios" id="Onions" value="option2">
+                        <label class="form-check-label" for="exampleRadios2">
+                          Onions
+                        </label>
+                      </div></li>
+                    <li class="list-group-item">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="exampleRadios" id="JalapenoPeppers" value="option2">
+                        <label class="form-check-label" for="exampleRadios2">
+                          Jalepeno Peppers
+                        </label>
+                      </div></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="card-footer text-muted">
+                  <a href="#" class="btn btn-primary text-right">Next Step</a>
+                </div>
+              </div>
+
+
+
+
+
+
+
+              <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                <!--            Tab 3 toppings-->
+
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                  <!--&lt;!&ndash;            tab cheese and sauce&#45;&#45; need drop downs!!!-->
+                  <div class="card text-center">
+                    <div class="card-header">
+                      Choose Cheese and Sauce
+                    </div>
+                    <div class="card-body">
+                      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">.
+                        <div class="card" style="width: 18rem;">
+                          <div class="card-header">
+                            Cheese
+                          </div>
+                          <li class="list-group list-group-flush">
+                          <li class="list-group-item">How Much?</li>
+                          <li class="list-group-item">
+                            <div class="form-check">
+                              <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Regular
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <a class="dropdown-item" href="#">Light</a>
+                                  <a class="dropdown-item" href="#">Normal</a>
+                                  <a class="dropdown-item" href="#">Extra</a>
+                                  <a class="dropdown-item" href="#">Double</a>
+                                </div>
+                              </div>
+                            </div>
+
+                            </ul>
+
+
+
+                            <div class="form-group">
+                              <label for="exampleFormControlSelect1">Example select</label>
+                              <select class="form-control" id="exampleFormControlSelect1">
+                                <option>light</option>
+                                <option>Normal</option>
+                                <option>Extra</option>
+                                <option>Double</option>
+                                <option>5</option>
+                              </select>
+                            </div>
+
+
+
+                        </div>
+                      </div>
+                      <div class="card-footer text-muted">
+                        <a href="#" class="btn btn-primary text-right">Next Step</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+
+
+
+
+
+                    ...</div>
+                </div>
+
+                </ul>
+                <!--    <div class="card-header">-->
+
+
+                <!--        <div>Choose Size and Crust</div>-->
+                <!--        <div class="form-check">-->
+                <!--            <ul>-->
+                <!--            <div><p>Hand Tossed</p></div>-->
+                <!--            <div><p>Garlic seasoned crust with a rich, buttery taste</p></div>-->
+                <!--            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>-->
+                <!--            <label class="form-check-label" for="exampleRadios1">-->
+                <!--                Small (10")-->
+                <!--            </label-->
+                <!--            </ul>-->
+                <!--        </div>-->
+                <!--        <div class="form-check">-->
+                <!--            <ul>-->
+                <!--            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">-->
+                <!--            <label class="form-check-label" for="exampleRadios2">-->
+                <!--                Medium (12")-->
+                <!--            </label>-->
+                <!--            </ul>-->
+                <!--        </div>-->
+                <!--        <div class="form-check">-->
+                <!--            <div><p>Crispy Thin</p></div>-->
+                <!--            <ul>-->
+                <!--                <div><p>Thin enough for optimum crispy to crunchy ratio.</p></div>-->
+                <!--            </ul>-->
+                <!--        </div>-->
+                <!--            <div>-->
+                <!--                <ul>-->
+                <!--                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>-->
+                <!--                    <label class="form-check-label" for="exampleRadios1">Medium (12")-->
+                <!--                    </label>-->
+                <!--                    <div class="form-check"><input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">-->
+                <!--                    <label class="form-check-label" for="exampleRadios2">Large (14")-->
+                <!--                    </label>-->
+                <!--                </ul>-->
+                <!--            </div>-->
+                <!--    </div>-->
+                <!--    <div class="card-body">-->
+                <!--        <h5 class="card-title"></h5>-->
+                <!--        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
+                <!--        <a href="#" class="btn btn-primary">Go somewhere</a>-->
+                <!--    </div>-->
+                <!--</div>-->
+
+
+                <!--&lt;!&ndash;tab2&ndash;&gt;-->
+
+
+
+                <!--<div>Choose Cheese and Sauce</div>-->
+                <!--<div class="form-check">-->
+                <!--    <ul>-->
+                <!--        <div><p>Cheese</p></div>-->
+                <!--        <div><p>How Much?</p></div>-->
+                <!--        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>-->
+                <!--        <label class="form-check-label" for="exampleRadios1">-->
+                <!--            Small (10")-->
+                <!--        </label-->
+                <!--    </ul>-->
+                <!--</div>-->
+                <!--<div class="form-check">-->
+                <!--    <ul>-->
+                <!--        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">-->
+                <!--        <label class="form-check-label" for="exampleRadios2">-->
+                <!--            Medium (12")-->
+                <!--        </label>-->
+                <!--    </ul>-->
+                <!--</div>-->
+                <!--<div class="form-check">-->
+                <!--    <div><p>Crispy Thin</p></div>-->
+                <!--    <ul>-->
+                <!--        <div><p>Thin enough for optimum crispy to crunchy ratio.</p></div>-->
+                <!--    </ul>-->
+                <!--</div>-->
+                <!--<div>-->
+                <!--    <ul>-->
+                <!--        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>-->
+                <!--        <label class="form-check-label" for="exampleRadios1">Medium (12")-->
+                <!--        </label>-->
+                <!--        <div class="form-check"><input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">-->
+                <!--            <label class="form-check-label" for="exampleRadios2">Large (14")-->
+                <!--            </label>-->
+                <!--    </ul>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div class="card-body">-->
+                <!--    <h5 class="card-title"></h5>-->
+                <!--    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
+                <!--    <a href="#" class="btn btn-primary">Go somewhere</a>-->
+                <!--</div>-->
+                <!--</div>-->
+
+                <!--&lt;!&ndash;tab3&ndash;&gt;-->
+
+                <!--<div>Choose Toppings</div>-->
+                <!--<ul class="list-group">-->
+                <!--    <li class="list-group-item">Meats</li>-->
+                <!--    <div class="input-group mb-3">-->
+                <!--        <div class="input-group-prepend">-->
+                <!--         <li><div class="input-group-text">-->
+                <!--                <input type="checkbox" class="form-check-input" id="material unchecked">-->
+                <!--                <label class="form-check-label" for="material unchecked">Beef</label>-->
+                <!--         </div></li>-->
+                <!--         <li><div class="input-group-text">-->
+                <!--                <input type="checkbox" class="form-check-input" id="material unchecked">-->
+                <!--                <label class="form-check-label" for="material unchecked">Ham</label>-->
+                <!--         </div></li>-->
+                <!--            <li><div class="input-group-text">-->
+                <!--                <input type="checkbox" class="form-check-input" id="material unchecked">-->
+                <!--                <label class="form-check-label" for="material unchecked">Philly Steak</label>-->
+                <!--            </div></li>-->
+                <!--            <li><div class="input-group-text">-->
+                <!--                <input type="checkbox" class="form-check-input" id="material unchecked">-->
+                <!--                <label class="form-check-label" for="material unchecked">Bacon</label>-->
+                <!--            </div></li>-->
+                <!--            </ul>-->
+                <!--        </div>-->
+                <!--    </div>-->
+                <!--</ul>-->
+
+
+
+
+                <!--    &lt;!&ndash; Material unchecked &ndash;&gt;-->
+                <!--    <div class="form-check">-->
+                <!--        <input type="checkbox" class="form-check-input" id="materialUnchecked">-->
+                <!--        <label class="form-check-label" for="materialUnchecked">Material unchecked</label>-->
+                <!--    </div>-->
+
+                <!--    <div class="input-group">-->
+                <!--        <div class="input-group-prepend">-->
+                <!--            <div class="input-group-text">-->
+                <!--                <input type="radio" aria-label="Radio button for following text input">-->
+                <!--            </div>-->
+                <!--        </div>-->
+                <!--        <input type="text" class="form-control" aria-label="Text input with radio button">-->
+                <!--    </div>-->
+
+                <!--<div class="form-check">-->
+                <!--    <ul>-->
+                <!--        <div><p>Hand Tossed</p></div>-->
+                <!--        <div><p>Garlic seasoned crust with a rich, buttery taste</p></div>-->
+                <!--        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>-->
+                <!--        <label class="form-check-label" for="exampleRadios1">-->
+                <!--            Small (10")-->
+                <!--        </label-->
+                <!--    </ul>-->
+                <!--</div>-->
+                <!--<div class="form-check">-->
+                <!--    <ul>-->
+                <!--        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">-->
+                <!--        <label class="form-check-label" for="exampleRadios2">-->
+                <!--            Medium (12")-->
+                <!--        </label>-->
+                <!--    </ul>-->
+                <!--</div>-->
+                <!--<div class="form-check">-->
+                <!--    <div><p>Crispy Thin</p></div>-->
+                <!--    <ul>-->
+                <!--        <div><p>Thin enough for optimum crispy to crunchy ratio.</p></div>-->
+                <!--    </ul>-->
+                <!--</div>-->
+                <!--<div>-->
+                <!--    <ul>-->
+                <!--        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>-->
+                <!--        <label class="form-check-label" for="exampleRadios1">Medium (12")-->
+                <!--        </label>-->
+                <!--        <div class="form-check"><input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">-->
+                <!--            <label class="form-check-label" for="exampleRadios2">Large (14")-->
+                <!--            </label>-->
+                <!--    </ul>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div class="card-body">-->
+                <!--    <h5 class="card-title"></h5>-->
+                <!--    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
+                <!--    <a href="#" class="btn btn-primary">Go somewhere</a>-->
+                <!--</div>-->
+                <!--</div>-->
+
+
+
+                </body>
+
+
+
+
+
+                <!-- Optional JavaScript -->
+                <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+                </body>
+
+</html>
+
+
+
+
+
+</container>
+
 
 
 </html>

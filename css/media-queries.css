@@ -1,0 +1,139 @@
+/**{box-sizing: border-box}*/
+@media screen and (min-width: 276px) and (max-width: 767px) {
+    /*body{*/
+    /*    !*display: flex;*!*/
+    /*    !*flex-direction: column;*!*/
+
+
+
+    .hidden-on-desktop {
+        background-color: #ccffff;
+        display: flex;
+        text-align: center;
+        margin: 1em;
+        padding: 1em;
+        justify-content: center;
+        border: 1px #cccccc solid;
+
+    }
+    h1{
+        text-align: center;
+    }
+
+
+    .header-img img{
+        max-width: 100%;
+        max-height: 224px;
+        margin-right: auto;
+        margin-left: auto;
+
+
+
+    }
+
+    nav{
+
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        justify-content: space-evenly;
+        max-width: 100%;
+
+
+    }
+    .nav-links{
+        text-align: center;
+        padding: 0;
+
+        list-style: none;
+        width: 100%;
+        max-width: 100%;
+        max-height: 224px;
+        margin-right: auto;
+        margin-left: auto;
+
+
+
+    }
+    .nav-links li {
+        background-color: #cccccc;
+        margin: 0;
+
+    }}
+/*    }*/
+/*}*/
+
+
+
+/*!*}*!*/
+/*!*@media screen and(min-width: 768px) and(max-width: 991px){*!*/
+
+/*!*}*!*/
+/*!*@media screen and(min-width: 992px) and(max-width: 1199px){*!*/
+
+/*!*}*!*/
+@media screen and (min-width: 1200px) {
+    .hidden-on-desktop{
+        text-decoration: none;
+        visibility: hidden;
+    }
+    .header-img img {
+        width: auto;
+        max-height: 385px;
+        margin-right: auto;
+        margin-left: auto;
+
+
+
+    }
+    h1{
+        width: 20%;
+        max-width: 50%;
+        margin-right: auto;
+        float: left;
+
+    }
+    nav{
+        display: flex;
+        flex-direction: row;
+        float: right;
+
+
+
+
+    }
+    .nav-links{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        list-style: none;
+        align-items: center;
+        grid-area: head;
+
+
+    }
+    /*.navBar{*/
+    /*    flex-direction: row;*/
+    /*}*/
+
+
+    .nav-links li{
+
+        padding: 10px;
+    }
+    .paragraph{
+        display: flex;
+        flex-direction: row;
+    }
+    .main{
+        width: 60%;
+
+    }
+    .sub-section{
+        width: 40%;
+
+
+    }
+}

@@ -42,22 +42,27 @@
 
             // showhide
 
-            $("#hide").click(function(){
-                $("#para").hide();
-            });
+            // $("#hide").click(function(){
+            //     $("#para").hide();
+            // });
+            //
+            // $("#show").click(function(){
+            //     $("#para").show();
+            // });
 
-            $("#show").click(function(){
-                $("#para").show();
-            });
+            // $('#codeup').hover(function() {
+            //         $(this).css('background-color', '#FF0');
+            //     },
+            //     function() {
+            //         $(this).css('background-color', '#FFF');
+            //     }
+            // )
 
-            $('#codeup').hover(
-                function() {
-                    $(this).css('background-color', '#FF0');
-                },
-                function() {
-                    $(this).css('background-color', '#FFF');
-                }
-            );
+            $("p").hover(function(){
+                $(this).css("background-color", "yellow");
+            }, function(){
+                $(this).css("background-color", "pink");
+            });
 
 
 
@@ -106,7 +111,7 @@
 
 
 
-    <div ID="textbox2">
+    <div>
 
 <a href="#" id="show">Click to show</a> || <a href="#" id="hide">Click to hide</a>
     <p id="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga id nesciunt porro. Cupiditate doloribus eligendi ex impedit modi molestias possimus.</p>

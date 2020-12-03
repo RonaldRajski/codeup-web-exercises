@@ -1,0 +1,19 @@
+body{
+    margin-left: 1em;
+    margin-right: 1em;
+
+}
+
+
+hr{
+    background-color: green;
+    height: 2px;
+}
+
+h2{
+    color: blue;
+}
+
+#information{
+    text-align: center;
+}

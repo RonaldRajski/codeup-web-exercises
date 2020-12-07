@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <div id="main">
+        <input type="text" id="input">
+        <button id="add-to-list">Add to List</button>
+
+        <p id="demo">Hello World</p>
+
+        <h4>Favorite Food:</h4>
+        <ul id="favorite-food">
+            <li>Ramen</li>
+            <li>Sushi</li>
+            <li>Curry</li>
+        </ul>
+
+        <h4 id="changeme">Change Me</h4>
+
+        <h4>My Cohort: <span id="my-cohort"></span></h4>
+        <input type="text" id="cohort-name">
+        <button id="change-cohort">Update</button>
+
+        <br>
+        <button id="highlight">Highlight</button>
+    </div>
+</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
+    <script>
+        "use strict";
+
+
+        <!--Open up dom-review.html and follow the instructions:-->
+
+        <!--Allow the user to type in their favorite food into the input and append it to the list once the button is clicked.-->
+
+        function myFunction() {
+        var node = document.createElement("li")
+        var textnode = document.createTextNode("Water");
+        node.appendChild(textnode);
+        document.getElementById("myList").appendChild(node);
+        }
+
+        <!--XXX When the heading 'Change Me' is double clicked, change its background-color to purple.-->
+
+        $(document).ready(function(){
+            console.log("hello");
+                            // $("#changeme").click(function(){
+                            //     console.log("click");
+                            // })
+            $('#changeme').click(function () {
+                console.log("dblclick");
+                $(this).css("background-color", "purple");
+            })
+        });
+
+
+        $('#highlight').click(function() {
+            $('#cohort-name').css("background-color", "yellow");
+        });
+
+
+
+
+    </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,247 @@
+body {
+    background-color: #F0F0F0;
+}
+
+
+h1 {
+    font-size: 64px;
+    font-family: 'Abel', sans-serif;;
+}
+
+h2 {
+    font-size: 48px;
+    font-family: 'Anton', sans-serif;
+}
+
+h3 {
+    font-size: 40px;
+    font-family: 'Anton', sans-serif;
+}
+
+h4 {
+    font-size: 32px;
+    font-family: 'Anton', sans-serif;
+    margin-bottom: 1em;
+}
+
+h5> card {
+    font-size: 28px;
+    font-family: 'Anton', sans-serif;
+}
+
+.abel-text {
+    font-family: 'Abel', sans-serif;
+    padding-top: 10px;
+}
+
+p {
+    font-size: 28px;
+    font-family: 'Anton', sans-serif;
+}
+
+#selected {
+    font-family: 'Abel', sans-serif;
+    text-align: center;
+}
+
+#red-circle {
+    color: #E6563B;
+}
+
+#orange-circle {
+    color: #EB9D3A;
+}
+
+#green-circle {
+    color: #7CB06C;
+}
+
+#blue-circle {
+    color: #00ABA9;
+}
+
+#white-circle {
+    color: #F0F0F0;
+}
+
+#light-grey-circle {
+    color: #E6E6E6;
+}
+
+#logo {
+    border-radius: 50%;
+    height: 105px;
+    width: 105px;
+}
+
+#red-icon {
+    color: #E6563B;
+}
+
+.icons {
+    border-radius: 50%;
+    height: 18px;
+    width: 18px;
+    text-align: center;
+    font-family: 'Anton', sans-serif;;
+}
+
+#orange-icon {
+    color: #EB9D3A;
+}
+
+#green-icon {
+    color: #7CB06C;
+
+}
+
+#blue-icon {
+    color: #00ABA9;
+}
+
+#blue-icon {
+    color: #00ABA9;
+
+}
+
+.small-circles {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    font-size: 10px;
+    background-color: #00ABA9;
+    font-family: 'Anton', sans-serif;;
+    font-weight: bold;
+    padding-top: 1px;
+    margin-right: .5em;
+}
+
+.card-body>p {
+    font-size: 14px;
+}
+/*xs*/
+@media screen and (max-width: 576px) {
+    hr {visibility: hidden}
+    .invisible-card {
+        visibility: hidden;
+    }
+}
+/*sm*/
+@media screen and (max-width: 767px) {
+    hr {width: 50%}
+    #the-last {
+        visibility: hidden;
+    }
+
+}
+/*md*/
+@media screen and (min-width: 768px) {
+    hr {width: 50%}
+}
+/*lg*/
+@media screen and (min-width: 992px) {
+    hr {width: 100%}
+    #selected {
+        font-family: 'Abel', sans-serif;
+        text-align: left;
+    }
+
+}
+/*xl-lg*/
+@media screen and (min-width: 1200px) {
+    hr {width: 50%}
+    #selected {
+        font-family: 'Abel', sans-serif;
+        text-align: left;
+    }
+}
+
+header {
+    margin: 1em;
+    justify-content: space-between;
+}
+
+.big-circles {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    margin-right: 1em;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid white;
+    color: white;
+    font-family: 'Anton', sans-serif;
+}
+
+.big-circles>h5 {
+    font-size: 20px;
+}
+
+.design {
+    background-color: #e6563b;
+}
+.develop {
+    background-color: #eb9d3a;
+}
+.support {
+    background-color: #7cb06c;
+}
+.host {
+    background-color: #00aba9;
+}
+
+
+.red {
+    background-color: #E6563B;
+}
+.orange {
+    background-color: #EB9D3A;
+}
+.green {
+    background-color: #7CB06C;
+}
+.blue {
+    background-color:#00ABA9;
+}
+
+.logo {
+    width: 105px;
+    height: 105px;
+    display: flex;
+
+}
+
+.card {
+    margin-bottom: 50px;
+}
+
+
+.nav-link {
+    color: black;
+}
+
+ul {
+    font-family: 'Abel', sans-serif;
+}
+
+#xs-logo {
+    display: flex;
+    justify-content: center;
+}
+
+#logo-row {
+    background: linear-gradient(to bottom, rgba(240, 240, 240, 1) 0%, rgba(240, 240, 240, 1) 25%, rgba(255, 255, 255, 1) 26%, rgba(255, 255, 255, 1) 74%, rgba(240, 240, 240, 1) 75%, rgba(240, 240, 240, 1) 100%);
+}
+
+.tweet>p {
+    font-family: 'Abel', sans-serif;
+}
+
+#final {
+    font-family: 'Abel', sans-serif;
+}
+
+.media-body {
+    font-family: 'Anton', sans-serif;
+}

@@ -1,89 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <title>Defuse the BOM</title>
 </head>
 <body>
-    <h2 id="message">This BOM will self destruct in
-        <span id="timer">5</span>
-        seconds...</h2>
-        <button id="defuser">Defuse the BOM</button>
 
-    <script>
+<h2 id="message">This BOM will self destruct in <span id="timer">5</span> seconds...</h2>
+<button id="defuser">Defuse the BOM</button>
 
+<script>
+    (function() {
+        "use strict";
 
+        var detonationTimer = 5;
 
-        (function() {
-            "use strict";
-
-            var detonationTimer = 5;
-
-            // TODO: This function needs to be called once every second
-            // function.setInterval(updateTimer()
-            // {
-            //     if (detonationTimer == 0) {
-            //         alert('EXTERMINATE!');
-            //         document.body.innerHTML = '';
-            //     } else if (detonationTimer > 0) {
-            //         document.getElementById('timer').innerHTML = detonationTimer;
-            //     }
-            //
-            //
-            //     detonationTimer();
-            // }
-
-            window.setInterval(function(){
-                /// call your function here
-            }, 5000);
-
-            // TODO: When this function runs, it needs to
-            // cancel the interval/timeout for updateTimer()
-            function defuseTheBOM() {
-
+        // TODO: This function needs to be called once every second
+        function updateTimer() {
+            if (detonationTimer == 0) {
+                alert('EXTERMINATE!');
+                document.body.innerHTML = '';
+            } else if (detonationTimer > 0) {
+                document.getElementById('timer').innerHTML = detonationTimer;
             }
 
-            // Don't modify anything below this line!
-            //
-            // This causes the defuseTheBOM() function to be called
-            // when the "defuser" button is clicked.
-            // We will learn about events in the DOM lessons
-            var defuser = document.getElementById('defuser');
-            defuser.addEventListener('click', defuseTheBOM);
-        })();
-
-        // Practice
-
-        var i= 0;
-
-        var callback = function (){
-            i++
-            console.log("Hooray!" + i );
+            detonationTimer--;
         }
-        // var interval = 4000;
+        let interval =setInterval(updateTimer, 1000);
 
-        var timeout = setTimeout(callback,
-            timeout, 4000);
-        // setTimeout(callback, interval);
-            // Takes in 2 parameters after the interval
+        // TODO: When this function runs, it needs to
+        // cancel the interval/timeout for updateTimer()
+        var movieDelay = 4000;
+        function defuseTheBOM() {
+            clearInterval((interval), movieDelay);
+            alert("That was close!");
+        }
 
-
-
-        clearTimeout(timeout);
-
-        var timeout2 = setInterval(callback, 400);
-
-        set clearInterval(function () {
-
-        }, timeout: 15000);
-
-        clearInterval(timeout2)
-
-
-
-
-    </script>
-
-
+        // Don't modify anything below this line!
+        //
+        // This causes the defuseTheBOM() function to be called
+        // when the "defuser" button is clicked.
+        // We will learn about events in the DOM lessons
+        var defuser = document.getElementById('defuser');
+        defuser.addEventListener('click', defuseTheBOM);
+    })();
+</script>
 </body>
 </html>

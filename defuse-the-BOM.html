@@ -20,16 +20,22 @@
             var detonationTimer = 5;
 
             // TODO: This function needs to be called once every second
-            function updateTimer() {
-                if (detonationTimer == 0) {
-                    alert('EXTERMINATE!');
-                    document.body.innerHTML = '';
-                } else if (detonationTimer > 0) {
-                    document.getElementById('timer').innerHTML = detonationTimer;
-                }
+            // function.setInterval(updateTimer()
+            // {
+            //     if (detonationTimer == 0) {
+            //         alert('EXTERMINATE!');
+            //         document.body.innerHTML = '';
+            //     } else if (detonationTimer > 0) {
+            //         document.getElementById('timer').innerHTML = detonationTimer;
+            //     }
+            //
+            //
+            //     detonationTimer();
+            // }
 
-                detonationTimer();
-            }
+            window.setInterval(function(){
+                /// call your function here
+            }, 5000);
 
             // TODO: When this function runs, it needs to
             // cancel the interval/timeout for updateTimer()
@@ -45,6 +51,36 @@
             var defuser = document.getElementById('defuser');
             defuser.addEventListener('click', defuseTheBOM);
         })();
+
+        // Practice
+
+        var i= 0;
+
+        var callback = function (){
+            i++
+            console.log("Hooray!" + i );
+        }
+        // var interval = 4000;
+
+        var timeout = setTimeout(callback,
+            timeout, 4000);
+        // setTimeout(callback, interval);
+            // Takes in 2 parameters after the interval
+
+
+
+        clearTimeout(timeout);
+
+        var timeout2 = setInterval(callback, 400);
+
+        set clearInterval(function () {
+
+        }, timeout: 15000);
+
+        clearInterval(timeout2)
+
+
+
 
     </script>
 

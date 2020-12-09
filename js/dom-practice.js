@@ -48,7 +48,7 @@ var input = document.getElementById("input");
 // function (){
 //     output.innerHTML= "Your name uppercased is: " + input;
 // }
-$("#upcase-name").click(function(){
+$("#uppercase-name").click(function(){
      output.innerHTML = "Your name uppercased is:" + input.value.toUpperCase();
 })
 

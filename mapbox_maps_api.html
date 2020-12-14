@@ -4,7 +4,11 @@
         <meta charset="UTF-8">
         <title>mapbox_maps.api.html</title>
 
-            <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet' />
+
+
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet' />
+
 
         <!-- Custom CSS -->
             <link 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" 	rel="stylesheet" 	integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" 	crossorigin="anonymous">
@@ -27,27 +31,76 @@
 
 </head>
 <body>
-
+    <h1>Mapbox Project</h1>
     <div class="container">
-        <h1>Mapbox Project</h1>
+        <div class="row">
+            <button type="button" class="btn btn-primary" id="reset-button">Reset</button>
+        </div>
+        <div class="row">
+            <div class="col">
+                <select id="zoom-select">
+                    <option selected disabled>Zoom Level</option>
+                    <option value="5">Zoom Level 5</option>
+                    <option value="15">Zoom Level 15</option>
+                    <option value="20">Zoom Level 20</option>
+                </select>
+
     </div>
+        </div>
+
+
+<!--        <div id="map"></div>-->
+        <div id="menu">
+            <input
+                    id="streets-v11"
+                    type="radio"
+                    name="rtoggle"
+                    value="streets"
+                    checked="checked"
+            />
+            <label for="streets-v11">streets</label>
+            <input id="light-v10" type="radio" name="rtoggle" value="light" />
+            <label for="light-v10">light</label>
+            <input id="dark-v10" type="radio" name="rtoggle" value="dark" />
+            <label for="dark-v10">dark</label>
+            <input id="outdoors-v11" type="radio" name="rtoggle" value="outdoors" />
+            <label for="outdoors-v11">outdoors</label>
+            <input id="satellite-v9" type="radio" name="rtoggle" value="satellite" />
+            <label for="satellite-v9">satellite</label>
+        </div>
 
 <!--Html element that serves as the Mapbox container-->
     <!-- The HTML element that serves as the Mapbox container -->
-    <div id='map'></div>
+    <div id='map'>
+
+
+    </div>
 
     <!-- Mapbox JS -->
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js'></script>
     <script src="js/keys.js"></script>
     <script src="js/mapbox-geocoder-utils.js"></script>
-    <script src="js/mapbox-api-lec.js"></script>
+    <script src="js/mapbox-api.js"></script>
+
+        <div id='map' style='width: 400px; height: 300px;'></div>
+        <script>
+            // mapboxgl.accessToken = ;
+            var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/streets-v11'
+            });
+        </script>
 
 
 
-    <!-- Custom JS -->
+
+
+
+
+        <!-- Custom JS -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
-
+    </div>
 </body>
 </html>

@@ -126,7 +126,7 @@ function mySet() {
     // this will return the union of the two sets
 
     this.union = function (otherSet){
-        var unionSet = new Set();
+        var unionSet = new mySet();
         var firstSet =  this.values();
         var secondSet = otherSet.values();
         firstSet.forEach(function (e){
@@ -148,9 +148,33 @@ function mySet() {
                 intersectionSet.add(e);
             }
         })
-    }
+    };
+
+    this.add =function (element){
+        if(!this.has(element)){
+            collection.push(element);
+            return true;
+        }
+        return false;
+    };
+
+    // this removes the element from a set
+
+    this.remove =function (element){
+        if(this.has(element)){
+            index =collection.indexOf(element);
+            collection.splice(index, 1);
+            return true;
+        }
+        return false;
+    };
+
+    // this will return the size of the collection:
+
+
 
 }
+
 
 
 

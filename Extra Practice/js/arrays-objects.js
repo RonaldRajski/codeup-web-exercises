@@ -523,4 +523,21 @@ function makeSandwichObjects(breads, fillings){
 
 }
 
-console.log(makeSandwichObjects(breads, fillings));;
+console.log(makeSandwichObjects(breads, fillings));
+
+// TODO Write a function named keepYellow that accepts an array of strings and returns an array with all the strings that are equal to "yellow"
+// solution
+function keepYellow(strings) {
+    var yellowBucket = []
+    strings.forEach(function (str) {
+        if(str === "yellow") {
+            yellowBucket.push(str)
+        }
+    });
+
+    return yellowBucket
+}
+
+
+
+console.log(keepYellow(["yellow", "red", "blue", "yellow", "black", "brown", "yellow"]));

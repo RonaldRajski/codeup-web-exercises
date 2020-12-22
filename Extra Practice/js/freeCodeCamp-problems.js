@@ -514,22 +514,19 @@ console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
 // The quickCheck function should utilize the indexOf() method
 
 // fizzbuzz
- function fizzBuzz(num){
 
-     for(i = 0; i<=100; i++){
-         if(num % 15 === 0){
-             return console.log("FizzBuzz");
-         }
-         else if(num % 5 === 0){
-             return console.log("Buzz");
-         }
-         else if (num % 3 === 0){
-             return console.log("Fizz");
-         }
-         else {
-             return console.log(num);
-         }
-     }
- }
+for (var i=1; i <= 100; i++)
+{
+    if (i % 3 == 0 && i % 5 == 0)
+        console.log("FizzBuzz");
+    else if (i % 3 == 0)
+        console.log("Fizz");
+    else if (i % 5 == 0)
+        console.log("Buzz");
+    else
+        console.log(i);
+}
+
+
 
 

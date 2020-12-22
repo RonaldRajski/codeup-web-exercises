@@ -484,7 +484,7 @@ function quickCheck(arr, elem) {
 
 // ternary
 
-    return arr.indexOf(elem) >= 0 ? true: false .....;
+    return arr.indexOf(elem) >= 0 ? true: false;
 
 
     // Only change code above this line
@@ -512,5 +512,24 @@ console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
 //
 // Passed
 // The quickCheck function should utilize the indexOf() method
+
+// fizzbuzz
+ function fizzBuzz(num){
+
+     for(i = 0; i<=100; i++){
+         if(num % 15 === 0){
+             return console.log("FizzBuzz");
+         }
+         else if(num % 5 === 0){
+             return console.log("Buzz");
+         }
+         else if (num % 3 === 0){
+             return console.log("Fizz");
+         }
+         else {
+             return console.log(num);
+         }
+     }
+ }
 
 

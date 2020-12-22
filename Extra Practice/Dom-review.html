@@ -10,7 +10,7 @@
 <div id="page">
     <hl id="header">List</hl>
     <h2>Buy groceries</h2>
-    <ul>
+    <ul id="favorite-food">
         <li id="one" class="hot"><em>fresh</em> figs</li>
         <li id="two" class="hot">pine nuts</li>
         <li id="three" class="hot">honey</li>
@@ -18,35 +18,135 @@
     </ul>
 </div>
 
+<div class="container">
+    <div id="main">
+        <input type="text" id="food">
+        <button id="add-to-list">Add to the List</button>
+    </div>
+
+    <h4>Favorite teams</h4>
+        <ul id="favorite-team">
+            <li>Cowboys</li>
+            <li>Bears</li>
+            <li>Cubs</li>
+        </ul>
+
+    <div id="main2">
+        <input type="text" id="team">
+        <button id="add-to-list2">Add your team</button>
+    </div>
+
+
+
+    <h4 id="change-me">Change-me</h4>
+
+    <h4>My Cohort: <span id="my-cohort"></span></h4>
+    <input type="text" id="cohort-name">
+    <button id="change-cohort">Update Cohort</button>
+
+    <br>
+    <button id="highlight">Highlight</button>
+
+
+
+</div>
+
+
+<script src="js/jquery-2.2.4.js"></script>
+
+
 <script>
     "use strict";
 
-    function doSomething() {
-        // let one = document.getElementById('one');
-        // console.log(one.innerHTML);
 
-        //delay page load; change heading
+    $(document).ready(function (){
 
-        // document.getElementById('page').setAttribute('style', 'visibility: hidden');
-        //
-        // setTimeout(function () {
-        //     document.getElementById('page').setAttribute('style', 'visibility: visible');
-        //     console.log('ready')
-        // }, 5000);
-
-        document.getElementById('two').setAttribute('style', 'visibility: hidden');
-
-        setTimeout(function(){
-            document.getElementById('two').setAttribute('style', 'visibility: visible');
-
-        }, 5000);
+        // Allow the user to type in their favorite food into the input and append it to the list once the button is clicked.
 
 
+        $('#add-to-list').click(function (){
+            var input = $('#food').val();
+            $('#favorite-food').append("<li>" + input + "</li>");
+            $('#food').val("");
+        })
+
+        $('#add-to-list2').dblclick(function (){
+            var input2 = $('#team').val();
+            $('#favorite-team').append("<li>" + input2 + "</li>");
+            $('#team').val("");
+        });
+
+        $('#change-me').dblclick(function (){
+            $(this).css('background-color', 'purple');
+            // this does not need quotes!
+        });
+
+        $('#change-cohort').click(function (){
+            // set value of input === to a variable
+            var input = $('#cohort-name').val();
+            // clears out the html everytime to append the field's value to the span
+            $('#my-cohort').html("");
+            // Appends the value to the span field
+            $('#my-cohort').append(input);
+            // clears out the input field
+            $('#cohort-name').val("");
+        });
+
+        $('#highlight').click(function (){
+            $('#my-cohort').css('background-color', ' yellow');
+        });
+
+        setTimeout(function (){
+            $('.container').css('background', 'pink');
+
+        }, 7000);
 
 
-    }
 
-    doSomething()
+
+
+
+
+
+
+
+
+    });
+
+
+
+
+
+
+
+
+
+    // function doSomething() {
+    //     // let one = document.getElementById('one');
+    //     // console.log(one.innerHTML);
+    //
+    //     //delay page load; change heading
+    //
+    //     // document.getElementById('page').setAttribute('style', 'visibility: hidden');
+    //     //
+    //     // setTimeout(function () {
+    //     //     document.getElementById('page').setAttribute('style', 'visibility: visible');
+    //     //     console.log('ready')
+    //     // }, 5000);
+    //
+    //     document.getElementById('two').setAttribute('style', 'visibility: hidden');
+    //
+    //     setTimeout(function(){
+    //         document.getElementById('two').setAttribute('style', 'visibility: visible');
+    //
+    //     }, 5000);
+    //
+    //
+    //
+    //
+    // }
+    //
+    // doSomething()
 
 </script>
 </body>

@@ -74,3 +74,11 @@ $('.hat-sold: last').hover(function (){
 })
 
 // keyboard events
+
+$(document).keydown(function (){
+    console.log(e);
+})
+
+$(document).keypress(function (){
+    console.log("key pressed" + e.key);
+})

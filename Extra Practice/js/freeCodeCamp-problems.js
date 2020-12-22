@@ -382,3 +382,135 @@ function countup(n) {
         }
     }
 
+
+    // Using Splice
+
+// We have defined a function, htmlColorNames, which takes an array of HTML colors as an argument. Modify the function using splice() to remove the first two elements of the array and add 'DarkSalmon' and 'BlanchedAlmond' in their respective places.
+
+function htmlColorNames(arr) {
+    // Only change code below this line
+    arr.splice(0, 2, "DarkSalmon", "BlanchedAlmond");
+    // splice(start of splice (0), how many cut out (2)), replacement 1, replacement 2)
+    // Only change code above this line
+    return arr;
+}
+
+console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurquoise', 'FireBrick']));
+
+
+// using slice();
+// We have defined a function, forecast, that takes an array as an argument. Modify the function using slice() to extract information from the argument array and return a new array that contains the elements 'warm' and 'sunny'.
+
+function forecast(arr) {
+    // Only change code below this line
+
+
+
+    return arr.slice(2,4);
+}
+
+// Only change code above this line
+console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
+
+
+// We have defined a function, copyMachine which takes arr (an array) and num (a number) as arguments. The function is supposed to return a new array made up of num copies of arr. We have done most of the work for you, but it doesn't work quite right yet. Modify the function using spread syntax so that it works correctly (hint: another method we have already covered might come in handy here!).
+
+function copyMachine(arr, num) {
+    let newArr = [];
+    while (num >= 1) {
+        // Only change code below this line
+        newArr.push([...arr]);
+        // Only change code above this line
+        num--;
+    }
+    return newArr;
+}
+
+console.log(copyMachine([true, false, true], 2));
+
+// copyMachine([true, false, true], 2) should return [[true, false, true], [true, false, true]]
+//
+// Passed
+// copyMachine([1, 2, 3], 5) should return [[1, 2, 3], [1, 2, 3], [1, 2, 3], [1, 2, 3], [1, 2, 3]]
+//
+// Passed
+// copyMachine([true, true, null], 1) should return [[true, true, null]]
+//
+// Passed
+// copyMachine(["it works"], 3) should return [["it works"], ["it works"], ["it works"]]
+//
+// Passed
+// The copyMachine function should utilize the spread operator with array arr
+
+// Basic Data Structures: Combine Arrays with the Spread Operator
+// Another huge advantage of the spread operator, is the ability to combine arrays, or to insert all the elements of one array into another, at any index. With more traditional syntaxes, we can concatenate arrays, but this only allows us to combine arrays at the end of one, and at the start of another. Spread syntax makes the following operation extremely simple:
+//
+//     let thisArray = ['sage', 'rosemary', 'parsley', 'thyme'];
+//
+// let thatArray = ['basil', 'cilantro', ...thisArray, 'coriander'];
+// // thatArray now equals ['basil', 'cilantro', 'sage', 'rosemary', 'parsley', 'thyme', 'coriander']
+// Using spread syntax, we have just achieved an operation that would have been more complex and more verbose had we used traditional methods.
+//
+//     We have defined a function spreadOut that returns the variable sentence. Modify the function using the spread operator so that it returns the array ['learning', 'to', 'code', 'is', 'fun'].
+
+function spreadOut() {
+    let fragment = ['to', 'code'];
+    let sentence = ['learning', ...fragment, 'is', 'fun'] // Change this line
+    return sentence;
+}
+
+console.log(spreadOut());
+
+// spreadOut should return ["learning", "to", "code", "is", "fun"]
+//
+// Passed
+// The spreadOut function should utilize spread syntax
+
+// indexOf() can be incredibly useful for quickly checking for the presence of an element on an array. We have defined a function, quickCheck, that takes an array and an element as arguments. Modify the function using indexOf() so that it returns true if the passed element exists on the array, and false if it does not.
+
+function quickCheck(arr, elem) {
+    // Only change code below this line
+
+    // Solution 1
+// if (arr.indexOf(elem) >= 0){
+//   return true
+// }
+// else
+//   return false;
+
+// Solution 2
+
+// return arr.indexOf(elem) != -1;
+
+// ternary
+
+    return arr.indexOf(elem) >= 0 ? true: false .....;
+
+
+    // Only change code above this line
+}
+
+
+
+
+
+console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
+
+// The quickCheck function should return a boolean (true or false), not a string ("true" or "false")
+//
+// Passed
+// quickCheck(["squash", "onions", "shallots"], "mushrooms") should return false
+//
+// Passed
+// quickCheck(["onions", "squash", "shallots"], "onions") should return true
+//
+// Passed
+// quickCheck([3, 5, 9, 125, 45, 2], 125) should return true
+//
+// Passed
+// quickCheck([true, false, false], undefined) should return false
+//
+// Passed
+// The quickCheck function should utilize the indexOf() method
+
+

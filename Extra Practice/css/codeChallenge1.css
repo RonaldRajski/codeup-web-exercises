@@ -1,0 +1,19 @@
+body{
+    background-color: lightgray;
+}
+
+#img-div {
+    background-color: white;
+    align-content: center;
+    justify-content: center
+}
+header{
+    text-align: center;
+}
+
+#billion, #img-caption{
+    text-align: center;
+}
+
+
+

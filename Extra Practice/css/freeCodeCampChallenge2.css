@@ -96,6 +96,13 @@ container{
     margin-bottom: 1.875rem;
 }
 
+.description{
+    font-style: italic;
+    font-weight: 200;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+
+}
+
 
 
 

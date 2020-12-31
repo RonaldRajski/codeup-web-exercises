@@ -242,6 +242,9 @@ else {
 }
 
 
+// 26 Switch statement
+
+const day = 'Monday'
 
 
 

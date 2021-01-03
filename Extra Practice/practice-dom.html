@@ -20,16 +20,22 @@
     <form name="login">
         <div>
             <label for="username">Username</label>
-            <input type="text" id="username">
+            <input id="username" name="username" type="text">
         </div>
         <div>
             <label for="password">Password</label>
-            <input type="password" id="password" name="password">
+            <input id="password" name="password" type="password">
         </div>
         <div>
             <input type="submit">
         </div>
     </form>
+    <hr>
+    <h1 id="main-heading">Hello World!</h1>
+    <div id="main-section">
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+    </div>
 
 <script>
     "use strict";
@@ -42,17 +48,50 @@
         // prints li.even.list-one-item
 
         // Print all elements
-        for(var i=0; i <listItems.length; i++){
-            console.log(listItems[i]);
+        for(var i=0; i < evenElements.length; i++){
+            console.log(evenElements[i]);
         }
 
         // Prints
-        // li.odd.list-one-item
         // li.even.list-one-item
-        // li.odd.list-two-item
         // li.even.list-two-item
 
+        var listItems = document.getElementsByTagName('li');
+
+        // print the first list item
+        console.log(listItems[0], "listItem");
+
+        // Print all the listItems
+        for(var i=0; i < listItems.length; i++){
+            console.log(listItems[i], "all the list items");
+        }
+
+
+
         // get username input
+
+        var usernameInput = document.forms.login.username;
+        //
+        // // log the value of the "username" input
+        //
+        console.log(usernameInput);
+
+        // get main heading h1 by id
+
+        var mainHeading = document.getElementById('main-heading')
+
+        console.log(mainHeading.html);
+
+        mainHeading.innerHTML = "Hello Codeup";
+
+        console.log(mainHeading.innerHTML); // Prints Hello Codeup
+
+        // Get the main section div by id
+        var mainSection = document.getElementById('main-section');
+
+        console.log(mainSection.innerHTML);
+
+
 
 
     })();

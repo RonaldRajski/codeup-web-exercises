@@ -8,6 +8,37 @@
         .invisible{
             visibility: hidden;
         }
+        .pic1 {
+            background-image: url("img/mona-lisa-zombie.png");
+        }
+
+        .pic2 {
+            background-image: url("img/Rosie-the-riveter.png");
+        }
+
+        .pic3 {
+            background-image: url("img/girl-with-a-pearl-earring.png");
+        }
+
+        .pic-div {
+            display: inline-block;
+            border: saddlebrown 6px solid;
+            background-size: cover;
+            height: 16em;
+            width: 12em;
+            margin: 3em 3em .5em 3em;
+            text-align: center;
+        }
+
+        .pic-btn {
+            width: 6em;
+            margin: 0 8.2em 3em 8.2em;
+        }
+
+
+
+
+
     </style>
 
 
@@ -69,37 +100,39 @@
     <h3>YellowStone</h3>
         <ul>
             <li>Located mostly in Wyoming, but is spreads into Montana and Idaho as well</li>
-            <li>Features </li>
-            <li></li>
-            <li></li>
+            <li>Features "Old Faithful"</li>
+            <li>Very expensive lodging arrangements</li>
+            <li>Incredibly large, make sure you beware the bison.</li>
         </ul>
     <h3>Denali</h3>
     <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>Located in Alaska</li>
+        <li>Mount Denali was previously known a Mt. McKinley</li>
+        <li>Excellent opportunities to climb</li>
+        <li>Very cold</li>
     </ul>
 
+    <button id="last-fact" class="btn-primary">Last Fact</button>
 
 
-<h1>Parks List</h1>
-<h3>National Parks</h3>
-<h3 id="national-parks"><h3>
-    <li>Arches</li>
-    <li>Badlands</li>
-    <li>Carlsbad Caverns</li>
-    <li>Denali</li>
-    <li>Everglades</li>
-</ul>
-<h3>State Parks of Texas</h3>
-<ul id="state-parks-texas">
-    <li>Abilene</li>
-    <li>Big Bend</li>
-    <li>Choke Canyon</li>
-    <li>Davis Mountains</li>
-    <li>Enchanted Rock</li>
-</ul>
+
+<!--<h1>Parks List</h1>-->
+<!--<h3>National Parks</h3>-->
+<!--<h3 id="national-parks"><h3>-->
+<!--    <li>Arches</li>-->
+<!--    <li>Badlands</li>-->
+<!--    <li>Carlsbad Caverns</li>-->
+<!--    <li>Denali</li>-->
+<!--    <li>Everglades</li>-->
+<!--</ul>-->
+<!--<h3>State Parks of Texas</h3>-->
+<!--<ul id="state-parks-texas">-->
+<!--    <li>Abilene</li>-->
+<!--    <li>Big Bend</li>-->
+<!--    <li>Choke Canyon</li>-->
+<!--    <li>Davis Mountains</li>-->
+<!--    <li>Enchanted Rock</li>-->
+<!--</ul>-->
 
 
     <h3>Programs</h3>
@@ -111,6 +144,22 @@
             <li class="programs">JavaScript</li>
             <li class="programs">Java</li>
         </ul>
+
+
+<br>
+<div class="pic-div pic1">
+</div>
+<div class="pic-div pic2">
+</div>
+<div class="pic-div pic3">
+</div>
+<br>
+
+<div class="pic-btn-div">
+    <button id="btn1" class="pic-btn">Switch</button>
+    <button id="btn2" class="pic-btn">Switch</button>
+    <button id="btn3" class="pic-btn">Switch</button>
+</div>
 
 
 
@@ -129,20 +178,20 @@
                     $(this).css('background-color', 'yellow');
                 }).css('font-weight', 'bold');
 
-                // $('#last-fact').click(function () {
-                //     $('ul').each(function () {
-                //         console.log(this)
-                //         $(this).children('li').last().css('background-color', '#ff0')
-                //     });
-                // });
-                //
-                // $('h3').click(function () {
-                //     $(this).next().children('li').css('font-weight', 'bold');
-                // });
-                //
-                // $('li').click(function () {
-                //     $(this).parent().children('li').first().css('color', 'blue');
-                // });
+                $('#last-fact').click(function () {
+                    $('ul').each(function () {
+                        console.log(this)
+                        $(this).children('li').last().css('background-color', '#ff0')
+                    });
+                });
+
+                $('h3').click(function () {
+                    $(this).next().children('li').css('font-weight', 'bold');
+                });
+
+                $('li').click(function () {
+                    $(this).parent().children('li').first().css('color', 'blue');
+                });
 
 
                 // Lesson
@@ -164,6 +213,50 @@
 
                 $("li").first().css('background-color', 'purple');
                 $('li').last().css('background-color', 'orange');
+
+
+                // moving pictures
+
+                $('#btn1').click(function (){
+                    let leftDiv = $('.pic-div').first();
+                    let middleDiv = $('.pic-div').first().next();
+                    let rightDiv = $('.pic-div').last();
+                    let leftImage= leftDiv.css('background-image');
+                    let middleImage =  middleDiv.css('background-image');
+                    let rightImage = rightDiv.css('background-image');
+                    leftDiv.css('background-image', middleImage);
+                    middleDiv.css('background-image', rightImage);
+                    rightDiv.css('background-image', leftImage);
+                });
+
+                $('#btn2').click(function () {
+                    let randomOption = Math.floor(Math.random() + .5)
+                    let leftDiv = $('.pic-div').first()
+                    let middleDiv = $('.pic-div').first().next()
+                    let rightDiv = $('.pic-div').last()
+                    let leftImage = leftDiv.css('background-image')
+                    let middleImage = middleDiv.css('background-image')
+                    let rightImage = rightDiv.css('background-image')
+                    if (randomOption === 0) {
+                        leftDiv.css('background-image', middleImage)
+                        middleDiv.css('background-image', leftImage)
+                    } else {
+                        middleDiv.css('background-image', rightImage)
+                        rightDiv.css('background-image', middleImage)
+                    }
+                });
+
+                $('#btn3').click(function () {
+                    let leftDiv = $('.pic-div').first()
+                    let middleDiv = $('.pic-div').first().next()
+                    let rightDiv = $('.pic-div').last()
+                    let leftImage = leftDiv.css('background-image')
+                    let middleImage = middleDiv.css('background-image')
+                    let rightImage = rightDiv.css('background-image')
+                    leftDiv.css('background-image', rightImage)
+                    middleDiv.css('background-image', leftImage)
+                    rightDiv.css('background-image', middleImage)
+                });
 
 
 

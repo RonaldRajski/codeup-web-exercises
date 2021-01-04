@@ -177,11 +177,11 @@
 
     // OR, you can use below for this one:
 
-    setTimeout(function () {
-
-        $("body").css("font-family", "Comic Sans MS");
-
-    }, 1000);
+    // setTimeout(function () {
+    //
+    //     $("body").css("font-family", "Comic Sans MS");
+    //
+    // }, 1000);
 
     //hard mode for this one below
 
@@ -196,20 +196,36 @@
     //Write a function that bolds the words in the paragraph element with the id of thundercats when the get hype button is pressed
     //Hard mode: Bold one word every time the button is pressed
 
-    $('#get-hype').click( function () {
-
-        $('#thundercats').css('font-weight', 'bold');
-
-    });
+    // $('#get-hype').click( function () {
+    //
+    //     $('#thundercats').css('font-weight', 'bold');
+    //
+    // });
 
     //hard mode for this one below
+    var counter = 1;
 
     $("#get-hype").click( function () {
 
         $('#thundercats span:nth-child(" + counter + ")').css("font-weight", "bold");
+        $("#thundercats span:nth-child(" + counter + ")").css("font-weight", "bold");
 
         counter++;
 
+    })
+
+    // When a list item inside of the ul with the id of hl-toggle is first clicked, the background of the li that was clicked should change to yellow. When a list item that has a yellow background is clicked, the background should change back to the original background.
+    var count = 0;
+    var li = $("#hl-toggle").children();
+
+    $(li).click(function () {
+        count ++;
+        console.log(count);
+        if (count % 2 !== 0) {
+            $(this).css("background-color", "yellow");
+        } else {
+            $(this).css("background-color", "white");
+        }
     });
 </script>
 </html>

@@ -35,6 +35,10 @@
             margin: 0 8.2em 3em 8.2em;
         }
 
+        .blue{
+            color: blue;
+        }
+
 
 
 
@@ -191,6 +195,10 @@
 
                 $('li').click(function () {
                     $(this).parent().children('li').first().css('color', 'blue');
+
+                    // or
+
+                    //     $(this).parent().children('li').first().addClass('blue');
                 });
 
 
@@ -198,15 +206,14 @@
                 // .each
 
 
-
-                $(".programs").each(function (index){
-                    if(index % 2 ===0){
+                $(".programs").each(function (index) {
+                    if (index % 2 === 0) {
                         $(this).css('background-color', '#FF0')
                     }
                 });
 
-                $(".programs").each(function (index){
-                    if(index % 2 !==0){
+                $(".programs").each(function (index) {
+                    if (index % 2 !== 0) {
                         $(this).css('background-color', 'red')
                     }
                 });
@@ -217,12 +224,12 @@
 
                 // moving pictures
 
-                $('#btn1').click(function (){
+                $('#btn1').click(function () {
                     let leftDiv = $('.pic-div').first();
                     let middleDiv = $('.pic-div').first().next();
                     let rightDiv = $('.pic-div').last();
-                    let leftImage= leftDiv.css('background-image');
-                    let middleImage =  middleDiv.css('background-image');
+                    let leftImage = leftDiv.css('background-image');
+                    let middleImage = middleDiv.css('background-image');
                     let rightImage = rightDiv.css('background-image');
                     leftDiv.css('background-image', middleImage);
                     middleDiv.css('background-image', rightImage);
@@ -259,13 +266,9 @@
                 });
 
 
-
-
-
-
-                });
             });
-        })();
+        });
+    })();
 </script>
 
 </body>

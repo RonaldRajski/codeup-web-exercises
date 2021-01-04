@@ -48,9 +48,71 @@
 
     <dt >Where is the Kruger National Park located at?</dt>
     <dd class="invisible" id="#last-fact">It is not in the United States, It is in South Africa.</dd>
-
-
 </dl>
+
+<!--Under the FAQ, add 3 unordered lists like above. Each list should contain a national park name in an h3 element, and a ul of 4 facts about the park.-->
+
+<!--Create a button that, when clicked, makes the last li in each ul have a yellow background.-->
+
+<!--When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.-->
+
+<!--When any list item is clicked, first li of the parent ul should have a font color of blue.-->
+
+<h2>Nattional Parks</h2>
+    <h3>Arches</h3>
+        <ul>
+            <li>Located in Moab Utah</li>
+            <li>Site of the Moab 24 bicycle Race.</li>
+            <li>The visitor center is open from 0900 to 1600</li>
+            <li>Trails lead in and out of the Devil's garden.</li>
+        </ul>
+    <h3>YellowStone</h3>
+        <ul>
+            <li>Located mostly in Wyoming, but is spreads into Montana and Idaho as well</li>
+            <li>Features </li>
+            <li></li>
+            <li></li>
+        </ul>
+    <h3>Denali</h3>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+
+
+<h1>Parks List</h1>
+<h3>National Parks</h3>
+<h3 id="national-parks"><h3>
+    <li>Arches</li>
+    <li>Badlands</li>
+    <li>Carlsbad Caverns</li>
+    <li>Denali</li>
+    <li>Everglades</li>
+</ul>
+<h3>State Parks of Texas</h3>
+<ul id="state-parks-texas">
+    <li>Abilene</li>
+    <li>Big Bend</li>
+    <li>Choke Canyon</li>
+    <li>Davis Mountains</li>
+    <li>Enchanted Rock</li>
+</ul>
+
+
+    <h3>Programs</h3>
+        <ul>
+            <li class="programs">Linux</li>
+            <li class="programs">Apache</li>
+            <li class="programs">MySQL</li>
+            <li class="programs">PHP</li>
+            <li class="programs">JavaScript</li>
+            <li class="programs">Java</li>
+        </ul>
+
+
 
 <script src="js/jquery-2.2.4.js"></script>
 <script>
@@ -81,6 +143,31 @@
                 // $('li').click(function () {
                 //     $(this).parent().children('li').first().css('color', 'blue');
                 // });
+
+
+                // Lesson
+                // .each
+
+
+
+                $(".programs").each(function (index){
+                    if(index % 2 ===0){
+                        $(this).css('background-color', '#FF0')
+                    }
+                });
+
+                $(".programs").each(function (index){
+                    if(index % 2 !==0){
+                        $(this).css('background-color', 'red')
+                    }
+                });
+
+                $("li").first().css('background-color', 'purple');
+                $('li').last().css('background-color', 'orange');
+
+
+
+
 
 
                 });

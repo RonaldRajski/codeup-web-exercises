@@ -9,9 +9,9 @@
 
 <script>
     function fizzbuzz(num){
-        for(var = i; i <=num.length; i++){
+        for(var i = 1; i <=num; i++){
             if (i%15 ===0){
-                console.log("fizzbuzz");
+                console.log("Fizzbuzz");
                 continue;
             }
             else if(i%5===0){
@@ -24,6 +24,7 @@
                 console.log("Buzz");
                 continue;
             }
+            console.log(i);
         }
     }
     console.log(fizzbuzz(30));

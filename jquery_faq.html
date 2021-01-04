@@ -3,44 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <title>Jquery_faq</title>
+
+    <style>
+        .invisible{
+            visibility: hidden;
+        }
+    </style>
+
+
 </head>
 <body>
 
 <p>National Parks:</p>
 
+<a href="#" id="show-answers">Click to display answers.</a>
+
 <dl>
-    <dt>Hot Springs</dt>
-    <dd class="invisible"></dd>
+    <dt>Where is Hot Springs National Park located?</dt>
+    <dd class="invisible">Little Rock, Arkansas</dd>
 
-    <dt>Channel Islands</dt>
-    <dd class="invisible"></dd>
+    <dt>What ocean is the Channel Islands located in?</dt>
+    <dd class="invisible">Pacific Ocean</dd>
 
-    <dt>Gateway Arch</dt>
-    <dd class="invisible"></dd>
+    <dt>Why was the Gateway Arch built in St Louis?</dt>
+    <dd class="invisible">To commemorate the exploration of Lewis and Clark.</dd>
 
-    <dt>Redwood State Park</dt>
-    <dd class="invisible"></dd>
+    <dt>How much do the cabins cost to rent at Redwood State Park?</dt>
+    <dd class="invisible">More than you can afford...</dd>
 
-    <dt>Fort McHenry</dt>
-    <dd class="invisible"></dd>
+    <dt>What song was written about Fort McHenry?</dt>
+    <dd class="invisible">Durig the War of 1812, Francis Scott Key wrote the <em>The Star spangled Banner?</em></dd>
 
-    <dt>Hopewell Culture</dt>
-    <dd class="invisible"></dd>
+    <dt>Why is the Hopewell Culture worth preserving?</dt>
+    <dd class="invisible">Burial Mounds and historical information.</dd>
 
-    <dt>Independence National Hisorical</dt>
-    <dd class="invisible"></dd>
+    <dt>What famous item is located at Independence National Hisorical park?</dt>
+    <dd class="invisible">The Liberty Bell.</dd>
 
-    <dt>Big Cypress National Preserve</dt>
-    <dd class="invisible"></dd>
+    <dt>What are the summer temperatures at Big Cypress National Preserve?</dt>
+    <dd class="invisible">Still really cold</dd>
 
-    <dt>Sand Creek Massacre</dt>
-    <dd class="invisible"></dd>
+    <dt>What event occurred at Sand Creek Massacre Park?</dt>
+    <dd class="invisible">Cheyenne and Arapaho Indians were slaughtered by the US Army</dd>
 
-    <dt>Kruger National Park</dt>
-    <dd class="invisible"></dd>
+    <dt >Where is the Kruger National Park located at?</dt>
+    <dd class="invisible" id="#last-fact">It is not in the United States, It is in South Africa.</dd>
 
 
 </dl>
+
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+    (function () { // IFEE
+        "use strict"
+        $().ready(function () {
+            $(document).ready(function () {
+                $('#show-answers').click(function (event) {
+                    $('dd').toggleClass('invisible');
+                });
+
+                $('dt').click(function () {
+                    console.log(this)
+                    $(this).css('background-color', 'yellow');
+                }).css('font-weight', 'bold');
+
+                // $('#last-fact').click(function () {
+                //     $('ul').each(function () {
+                //         console.log(this)
+                //         $(this).children('li').last().css('background-color', '#ff0')
+                //     });
+                // });
+                //
+                // $('h3').click(function () {
+                //     $(this).next().children('li').css('font-weight', 'bold');
+                // });
+                //
+                // $('li').click(function () {
+                //     $(this).parent().children('li').first().css('color', 'blue');
+                // });
+
+
+                });
+            });
+        })();
+</script>
 
 </body>
 </html>

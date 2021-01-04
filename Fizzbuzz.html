@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fizzbuzz</title>
+</head>
+<body>
+<h1>Fizzbuzz</h1>
+
+<script>
+    function fizzbuzz(num){
+        for(var = i; i <=num.length; i++){
+            if (i%15 ===0){
+                console.log("fizzbuzz");
+                continue;
+            }
+            else if(i%5===0){
+                if (i%5 === 0){
+                    console.log("Fizz");
+                    continue;
+                }
+            }
+            else if (i%3 === 0){
+                console.log("Buzz");
+                continue;
+            }
+        }
+    }
+    console.log(fizzbuzz(30));
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

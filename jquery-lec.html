@@ -28,6 +28,14 @@
 
 </head>
 <body>
+<!--At the top of the page, add a div with two elements, an h1 that reads "Would you like to sign up for our newsletter?" and a span that has an 'x' in it. When the 'x' is clicked, hide the entire div element.-->
+
+    <div>
+        <h1>"Would you like to sign up for our newsletter?</h1>
+        <span>X</span>
+    </div>
+
+
 <main class="container">
     <section class="jumbotron">
         <h1>Fun with jQuery!</h1>
@@ -115,14 +123,14 @@
         $("#btn2").click(function () {
             $("#panel2").addClass("red");
         });
-        $("#btn3").click(function () {
-            // if (!$("#panel3").hasClass("hidden")) {
-            //     $("#panel3").addClass("hidden");
-            // } else {
-            //     $("#panel3").removeClass("hidden");
-            // }
-            $("#panel3").toggleClass("hidden");
-        });
+        // $("#btn3").click(function () {
+        //     // if (!$("#panel3").hasClass("hidden")) {
+        //     //     $("#panel3").addClass("hidden");
+        //     // } else {
+        //     //     $("#panel3").removeClass("hidden");
+        //     // }
+        //     $("#panel3").toggleClass("hidden");
+        // });
         $("#btn4").click(function () {
             $("#panel4").toggleClass("panel-primary").toggleClass("panel-warning");
         });
@@ -155,8 +163,28 @@
         })
 
         $("li").click(function (){
-            
+            $(this).next().toggleClass("cute");
+
+        });
+
+        $("#btn1").click(function (){
+            $("#panel1").hide(1655).show(4444)
         })
+
+        $("#btn2").click(function (){
+            $("#panel2").toggle(2222);
+        })
+
+        $("#btn3").click(function (){
+            // $("#panel3").slideUp(2222).slideDown(2222);
+            $("#panel3").slideToggle(2222);
+        })
+        $("#btn4").click(function (){
+            // $("#panel4").fadeOut(2222).fadeIn(2222);
+            $("#panel4").fadeToggle(2222);
+        })
+
+        $('span').cli
 
 
 

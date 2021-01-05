@@ -5,6 +5,9 @@
     <title>Jquery_faq</title>
 
     <style>
+        ul{
+            display: none;
+        }
         .invisible{
             visibility: hidden;
         }
@@ -48,6 +51,18 @@
 
 </head>
 <body>
+
+<!--At the top of the page, add a div with two elements, an h1 that reads "Would you like to sign up for our newsletter?" and a span that has an 'x' in it. When the 'x' is clicked, hide the entire div element.-->
+
+<div>
+    <h1>Would you like to sign up for our newsletter?</h1>
+    <span>X</span>
+</div>
+
+
+<div  >
+    <h2 id="register">Register for our site</h2>
+</div>
 
 <p>National Parks:</p>
 
@@ -93,7 +108,7 @@
 
 <!--When any list item is clicked, first li of the parent ul should have a font color of blue.-->
 
-<h2>Nattional Parks</h2>
+<h2>National Parks</h2>
     <h3>Arches</h3>
         <ul>
             <li>Located in Moab Utah</li>
@@ -189,17 +204,47 @@
                     });
                 });
 
+                // $('h3').click(function () {
+                //     $(this).next().children('li').css('font-weight', 'bold');
+                // });
+
+
+                // Need display none to work
                 $('h3').click(function () {
-                    $(this).next().children('li').css('font-weight', 'bold');
+                    $(this).next().slideToggle(750);
                 });
 
-                $('li').click(function () {
-                    $(this).parent().children('li').first().css('color', 'blue');
+                // window.onload = (event) => {
+                //     $('#register').show(),8000;
+                // };
+
+
+                // daniel solutions
+                // h3 parkname
+                // facts park facts ul
+
+
+
+                // $(".facts").hide();
+                // $(".parkname").click(function (){
+                //     $(this).next().slideToggle(1000);
+                // });
+
+                $("#register").hide().delay(8000).fadeIn(500);
+
+
+
+                // $('#national-parks-toggle').click(function() {
+                //     $('#national-parks').slideUp();
+                // });
+
+                // $('li').click(function () {
+                //     $(this).parent().children('li').first().fadeToggle();
 
                     // or
 
-                    //     $(this).parent().children('li').first().addClass('blue');
-                });
+                //     //     $(this).parent().children('li').first().addClass('blue');
+                // });
 
 
                 // Lesson
@@ -218,7 +263,7 @@
                     }
                 });
 
-                $("li").first().css('background-color', 'purple');
+                // $("li").first().css('background-color', 'purple');
                 $('li').last().css('background-color', 'orange');
 
 
@@ -264,6 +309,10 @@
                     middleDiv.css('background-image', leftImage)
                     rightDiv.css('background-image', middleImage)
                 });
+
+                $("span").click(function (){
+                    $("div").hide();
+                })
 
 
             });

@@ -17,19 +17,66 @@
         </thead>
         <tbody id="insertProducts"></tbody>
     </table>
+
+    <button id="btn1">Refresh</button>
+
+
+    <script src="js/jquery-2.2.4.js"> </script>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
 
     <script>
 
     (function() {
-    "use strict";
-    // TODO: Create an AJAX GET request for the file under data/inventory.json
+        "use strict";
+        // TODO: Create an AJAX GET request for the file under data/inventory.json
+            $.ajax("data/inventory.json")
+                .done(function (item) {
+                    console.log(item);
+                    for (var i = 0; i < item.length; i++) {
+                    $('#insertProducts').append("<tr>" +
+                        "<td>" + item[i].title + "</td>" +
+                        "<td>" + item[i].quantity + "</td>"+
+                        "<td>" + item[i].price + "</td>" +
+                        "<td>" + item[i].categories + "</td>" +
+                    "</tr>)")
+                }
+                });
 
-    // TODO: Take the data from inventory.json and append it to the products table
-    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
-    //             its contents and fields
-    //       HINT: You will want to target #insertProducts for your new HTML elements
-    })();
+
+
+
+
+        // TODO: Take the data from inventory.json and append it to the products table
+        //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+        //             its contents and fields
+        //       HINT: You will want to target #insertProducts for your new HTML elements.
+
+
+
+
+            $('#btn1').click(function () {
+                $('#insertProducts').empty();
+                $.ajax("data/inventory.json")
+                    .done(function(data){
+                        console.log(data);
+                        for (var i = 0; i < data.length; i++){
+                            $('#insertProducts').append('<tr>' +
+                                '<td>' + data[i].title + '</td>' +
+                                '<td>' + data[i].quantity + '</td>' +
+                                '<td>' + data[i].price + '</td>' +
+                                '<td>' + data[i].categories + '</td>' +
+                                '</tr>)');
+                        }
+                    });
+                // .css('font-weight', 'bold');
+            });
+
+
+
+
+
+        })();
 
     </script>
 

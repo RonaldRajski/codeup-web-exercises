@@ -3,10 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Online Store</title>
+
+    <style>
+        body{
+            background-color: #7dd56f;
+            color: #f7f7f7;
+            /*justify-content: center;*/
+            /*text-align: center;*/
+        }
+        #id{
+            text-transform: uppercase;
+        }
+
+        .center{
+            text-align: center;
+            margin-left: auto;
+            justify-content: center;
+        }
+    </style>
+
 </head>
 <body>
-    <h1>My Tool Store</h1>
-    <table id="id">products
+<div >
+    <h1 class="center">My Tool Store</h1>
+    <table id="id">Products
         <thead>
             <tr>
                 <th>Title</th>
@@ -18,7 +38,8 @@
         <tbody id="insertProducts"></tbody>
     </table>
 
-    <button id="btn1">Refresh</button>
+    <button id="btn1" class="center">Refresh</button>
+</div>
 
 
     <script src="js/jquery-2.2.4.js"> </script>

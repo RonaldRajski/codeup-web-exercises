@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox Current project</title>
+    <link 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" 	rel="stylesheet" 	integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" 	crossorigin="anonymous">
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' />
+    <script src="js/jquery-2.2.4.js"></script>
+
+    <style>
+        #map {
+            /* the width and height may be set to any size */
+            width: 100%;
+            height: 500px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+<!--    Navbar-->
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+        <a href="#" class="navbar-brand">Weather App</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="text-white form-inline ml-auto">Current City:
+            </div>
+        </div>
+    </nav>
+    <form class="form-inline ml-auto">
+        <input type="text" class="form-control" placeholder="Search">
+        <button type="submit" class="btn border border-black">Search</button>
+    </form>
+
+<!--End Navbar-->
+
+<!--Weather cards begin-->
+
+    <div id="wrapper" class="wrapper d-flex flex-wrap">
+        <div class="card m-2">
+            <div class="card-header">Featured</div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Temp</li>
+                <li class="list-group-item">Description</li>
+                <li class="list-group-item">Humidity</li>
+                <li class="list-group-item">Wind</li>
+                <li class="list-group-item">Pressure</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+<!--    <div class=" display-flex card-deck">-->
+<!--        <div class="card">-->
+<!--            <div class="card-header">Featured</div>-->
+<!--            <ul class="list-group list-group-flush">-->
+<!--                <li class="list-group-item">Cras justo odio</li>-->
+<!--                <li class="list-group-item">Dapibus ac facilisis in</li>-->
+<!--                <li class="list-group-item">Vestibulum at eros</li>-->
+<!--            </ul>-->
+<!--            <div class="card-body">-->
+<!--                <a href="#" class="card-link">Add More</a>-->
+<!--                <a href="#" class="card-link">Share</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="card">-->
+<!--            <div class="card-header">Featured</div>-->
+<!--            <ul class="list-group list-group-flush">-->
+<!--                <li class="list-group-item">Cras justo odio</li>-->
+<!--                <li class="list-group-item">Dapibus ac facilisis in</li>-->
+<!--                <li class="list-group-item">Vestibulum at eros</li>-->
+<!--            </ul>-->
+<!--            <div class="card-body">-->
+<!--                <a href="#" class="card-link">Add More</a>-->
+<!--                <a href="#" class="card-link">Share</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="card">-->
+<!--            <div class="card-header">Featured</div>-->
+<!--            <ul class="list-group list-group-flush">-->
+<!--                <li class="list-group-item">Cras justo odio</li>-->
+<!--                <li class="list-group-item">Dapibus ac facilisis in</li>-->
+<!--                <li class="list-group-item">Vestibulum at eros</li>-->
+<!--            </ul>-->
+<!--            <div class="card-body">-->
+<!--                <a href="#" class="card-link">Add More</a>-->
+<!--                <a href="#" class="card-link">Share</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="card">-->
+<!--            <div class="card-header">Featured</div>-->
+<!--            <ul class="list-group list-group-flush">-->
+<!--                <li class="list-group-item">Cras justo odio</li>-->
+<!--                <li class="list-group-item">Dapibus ac facilisis in</li>-->
+<!--                <li class="list-group-item">Vestibulum at eros</li>-->
+<!--            </ul>-->
+<!--            <div class="card-body">-->
+<!--                <a href="#" class="card-link">Add More</a>-->
+<!--                <a href="#" class="card-link">Share</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="card">-->
+<!--            <div class="card-header">Featured</div>-->
+<!--            <ul class="list-group list-group-flush">-->
+<!--                <li class="list-group-item">Cras justo odio</li>-->
+<!--                <li class="list-group-item">Dapibus ac facilisis in</li>-->
+<!--                <li class="list-group-item">Vestibulum at eros</li>-->
+<!--            </ul>-->
+<!--            <div class="card-body">-->
+<!--                <a href="#" class="card-link">Add More</a>-->
+<!--                <a href="#" class="card-link">Share</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+
+
+
+
+
+
+
+<!--    <div class="container">-->
+<!--        <h1>Weather Map</h1>-->
+<!--    </div>-->
+
+<!--    <div class="container">-->
+<!--        <div class="row my-3">-->
+<!--            <div class="col">-->
+<!--                <button type="button" class="btn btn-primary w-100" id="search-button">Search Again</button>-->
+<!--            </div>-->
+<!--            <div class="col">-->
+<!--                <button type="button" class="btn btn-primary w-100" id="reset-button">Reset</button>-->
+<!--            </div>-->
+
+<!--            <div class="col">-->
+<!--                <select class="form-select" id="zoom-select">-->
+<!--                    <option selected disabled>Zoom Level</option>-->
+<!--                    <option value="5">Zoom Level 5</option>-->
+<!--                    <option value="10">Zoom Level 10</option>-->
+<!--                    <option value="15">Zoom Level 15</option>-->
+<!--                    <option value="20">Zoom Level 20</option>-->
+<!--                </select>-->
+<!--            </div>-->
+
+<!--            <div class="col">-->
+<!--                <select class="form-select" id="style-select">-->
+<!--                    <option selected disabled>Map Style</option>-->
+<!--                    <option value="streets-v11">Street</option>-->
+<!--                    <option value="dark-v10">Dark</option>-->
+<!--                    <option value="satellite-v9">Satellite</option>-->
+<!--                </select>-->
+<!--            </div>-->
+
+<!--        </div>-->
+<!--        <div class="row my-3">-->
+<!--            <div class="col-3">-->
+<!--                <div class="input-group">-->
+<!--                    <input type="text" id="search" class="form-control" placeholder="Search...">-->
+<!--                    <div class="input-group-append">-->
+<!--                        <button id="searchbtn" type="button" class="btn btn-secondary">-->
+<!--                            <i class="fa fa-search"></i>-->
+<!--                        </button>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+
+
+    <div id='map' style='width: 100%; height: 300px;'>
+
+    </div>
+<script>
+
+    mapboxgl.accessToken = 'pk.eyJ1Ijoic2tpODQwNCIsImEiOiJjazVjajhiemowMHAwM2RvcjEyZTVqMXY1In0.6lCpJAsDfK7HhnSizCQXfA';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+        center: [-98.4916, 29.4252] , // starting position [lng, lat]
+        zoom: 9,// starting zoom
+        interactive: true
+    });
+
+    $(document).ready(function (){
+        $.get("http://api.openweathermap.org/data/2.5/weather", {
+            APPID: openWeatherToken,
+            q:     "San Antonio, US",
+            units: "imperial"
+        }).done(function(data) {
+            console.log(data);
+
+            // Creating the HTML image element for the forecast icon
+
+            let iconImage = '<img src="http://openweathermap.org/img/wn' + data.weather[0].icon + '@2.png" width="50" height="50"/>'
+
+            // Add the weather icon to the body of the html
+
+            $("body").append(iconImage);
+
+        });
+
+
+
+
+
+
+
+    });
+
+
+
+</script>
+
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js'></script>
+<script src="js/keys.js"></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+<!--<script src="js/mapbox_maps_api.js"></script>-->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>

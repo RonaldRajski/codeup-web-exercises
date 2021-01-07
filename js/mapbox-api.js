@@ -110,13 +110,13 @@ geocode("600 Navarro ST #350, San Antonio, TX 78205", mapBoxToken).then(function
     map.setZoom(20)
 })
 
-var timeoutId = setTimeout(function () {geocode("600 Navarro ST #350, San Antonio, TX 78205", mapBoxToken).then(function(result){
-    console.log(result);
-    map.flyTo({center : result});
-    map.setCenter(result);
-    map.setZoom(20)
-}) delay)
-});
+// var timeoutId = setTimeout(function () {geocode("600 Navarro ST #350, San Antonio, TX 78205", mapBoxToken).then(function(result){
+//     console.log(result);
+//     map.flyTo({center : result});
+//     map.setCenter(result);
+//     map.setZoom(20)
+// }) delay);
+// });
 
 // var popup = new mapboxgl.Popup({
 //     closeOnClick: false,

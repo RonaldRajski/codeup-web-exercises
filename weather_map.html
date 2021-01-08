@@ -1,392 +1,130 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dark Sky Call</title>
-    <!--    geocoder-->
+    <title>Mapbox Current project</title>
+    <link 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" 	rel="stylesheet" 	integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" 	crossorigin="anonymous">
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' />
 
 
+    <script src="js/jquery-2.2.4.js"></script>
+    <script src="js/weather_map.js"></script>
+    <script src="js/keys.js"></script>
 
-    <!-- Mapbox head -->
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet'/>
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
     <style>
-
-
-        .container{
-            background-image:url(img/alamo.png);
-            opacity: .5;
-            background-size: cover;
-            /*height: 100%*/
-            /*margin: 20px;*/
-            background-color: orangered;
+        body{
+            background-color: gold;
         }
-        .parent-card{
-            display: flex;
-            flex-direction: row;
-            /*background-image:url(images/alamo.jpeg);*/
-            /*flex-grow: 1;*/
-            /*justify-content: space-around;*/
-            /*padding: 10px;*/
-        }
-
-
-
-        .todayWeather {
-            background-color: lightgrey;
-            border: 1px solid gray;
-            text-align: center;
-        }
-
-        .tomorrowWeather {
-            background-color: lightgrey;
-            border: 1px solid gray;
-            text-align: center;
-        }
-
-        .nextWeather {
-            background-color: lightgrey;
-            border: 1px solid gray;
-            text-align: center;
-        }
-
-
-        .mainBackground {
-            background-color: coral;
-        }
-
-        #main-container {
-            display: flex;
-            flex-direction: row;
-            grid-template-areas:
-                    "header-1 header-1 header-1"
-                    "header-22 header-22 header-22"
-                    "current-weather tomorrows-weather day-after"
-                    "latLong latLong latLong"
-                    "map map map";
-            /*grid-template-rows: 60px 60px 390px 400px;*/
-            /*!*grid-template-columns: 33% 33% 33%;*!*/
-            /*grid-template-columns: repeat(3, 1fr);*/
-            /*grid-row-gap: 10px;*/
-            /*grid-column-gap: 10px;*/
-            /*height: 100vh;*/
-            /*margin: 10px;*/
-        }
-
-        /*.mainBackground {*/
-        /*    display: grid;*/
-        /*    grid-template-columns: repeat(3, 1fr);*/
-        /*    grid-template-rows: repeat(10, 1fr);*/
-        /*    grid-column-gap: 1px;*/
-        /*    grid-row-gap: 2px;*/
-        /*}*/
-
-        /*.div1 { grid-area: 1 / 1 / 2 / 4; }*/
-        /*.div2 { grid-area: 2 / 1 / 3 / 4; }*/
-        /*.div3 { grid-area: 3 / 1 / 6 / 4; }*/
-        /*.div4 { grid-area: 6 / 1 / 7 / 4; }*/
-        /*.div5 { grid-area: 7 / 1 / 11 / 4; }*/
-
-        #header-1 {
-            grid-area: header-1;
-            opacity: 1;
-        }
-        .alamo{
+        #map {
+            /* the width and height may be set to any size */
             width: 100%;
             height: 500px;
         }
-
-        #header-22 {
-            grid-area: header-22;
-            opacity: 2;
+        .nav1{
+            display: flex;
+            justify-content: space-between;
         }
-
-        #current-weather {
-            grid-area: current-weather;
-            width: 33.33%;
-        }
-
-        #tomorrows-weather {
-            grid-area: tomorrows-weather;
-            width: 33.3%;
-        }
-
-        #day-after {
-            grid-area: day-after;
-            width: 33.3%;
-        }
-        #latLong{
-            grid-area: lat-long;
-        }
-
-
-        #map {
-            grid-area: map;
-            /*!* the width and height may be set to any size *!*/
-            /*width: 100%;*/
-            /*height: 500px;*/
-            height: 400px;
-            width: 100%;
-
-        }
-
-        weatherType{
-
-            height: 50%;
-
-        }
-
-
-        /*
-
-                /* Create three equal columns that floats next to each other */
-        /*    float: left;*/
-        /*    width: 100%;*/
-        /*    padding: 10px;*/
-        /*    justify-content: center;*/
-        /*    background-color: lightgrey;*/
-        /*    border: gray 10px;*/
-        /*    margin: auto 0;*/
-        /*    !*height: 300px; !* Should be removed. Only for demonstration *!*!*/
-        /*}*/
-
-
     </style>
 
 
 </head>
+
 <body>
+<!--    Navbar-->
 
-<!--<div class="parent">-->
-<!--    <div class="div1"> </div>-->
-<!--    <div class="div2"> </div>-->
-<!--    <div class="div3"> </div>-->
-<!--    <div class="div4"> </div>-->
-<!--    <div class="div5"> </div>-->
-<!--</div>-->
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+        <a href="#" class="navbar-brand">Weather App</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-<div id="main-container class" class="mainBackground">
-
-    <h1><p class="quote"<strong>“If you don't like the weather in the Lone Star State, Wait ten minutes.”
-        ---Sam Houston circa 1836></strong></h1></p></h1>
-    <img class="alamo" src="images/alamo.jpeg">
-
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h1 id="header-1">Weather Application</h1>
-            <h3 id="header-22">San Antonio</h3>
-
-
+        <div class="nav1 collapse navbar-collapse " id="navbarCollapse">
+            <div id="current"class="text-white form-inline text ml-auto">Current City:
+            </div>
         </div>
-    </div>
-
-
-
-    <!--    Card 1 start-->
-
-    <div class="parent-card">
-
-
-        <div class="todayWeather" id="current-weather"></div>
-
-        <!--    Card 1 end-->
-
-
-        <!--    Card 2-->
-
-        <div class="tomorrowWeather" id="tomorrows-weather"></div>
-
-
-        <!--    Card 2 end-->
-
-
-        <!--    Card 3 begin-->
-
-        <div class="nextWeather" id="day-after"></div>
-
-
-        <!--    Card 3 end-->
-
-        <!--    Latitude-Longitude input begin-->
-
-    </div>
-
-    <div id="latLong"> </div>
-    <form>
-        Latitude:<br>
-
-        <input type="text" name="latitude" placeholder="Enter Latitude Here" id="lat">
-        <br>
-        Longitude:<br>
-
-        <input type="text" name="latitude" placeholder="Enter Longitude Here" id="long">
-
-        <input type="submit" value="Submit" id="go-getter">
+    </nav>
+    <form class="form-inline ml-auto">
+        <input type="text" class="form-control" placeholder="Search">
+        <button type="submit" class="btn border border-black bg-primary">find</button>
     </form>
+
+    <!--End Navbar-->
+
+<!--Weather cards begin-->
+
+    <div class="d-flex">
+
+
+        <div id="wrapperCard" class="wrapperCard  d-flex justify-content-between"></div>
+
+    </div>
+
+    <div id='map' style='width: 100%; height: 300px;'>
+
+    </div>
 </div>
-
-<!--    Latitude-Longitude input end-->
-
-
-
-
-<!-- The HTML element that serves as the Mapbox container -->
-<div id='map'></div>
-
-
-<!-- Mapbox JS -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<!--<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>-->
-<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
-<script src="js/mapbox-geocoder-utils.js"></script>
-<script src="js/keys.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
-<link
-        rel="stylesheet"
-        href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css"
-        type="text/css"
-/>
-<!-- Custom JS -->
 <script>
 
-    // (function () {
-    var weatherType  = {
-        "clear-day": "icon/climacons-master/SVG/Cloud-Drizzle-Sun-Alt.svg",
-        "clear-night": "icon/climacons-master/SVG//Cloud-Fog.svg",
-        "rain": "icon/climacons-master/SVG//Sun.svg",
-        "snow": "icon/climacons-master/SVG//Cloud-Sun.svg",
-        "sleet": "icon/climacons-master/SVG//Cloud-Fog.svg",
-        "wind": "icon/climacons-master/SVG//Cloud-Rain-Alt.svg",
-        "fog": "icon/climacons-master/SVG//Cloud-Refresh.svg",
-        "cloudy": "icon/climacons-master/SVG//Cloud-Snow-Sun.svg",
-        "partly-cloudy-day": "icon/climacons-master/SVG//Sun.svg",
-        "partly-cloudy-night": "icon/climacons-master/SVG//Moon.svg"
-    };
-
-    "use strict";
-
-
-
-
-    $(document).ready(function () {
-        getWeather(29.4241, -98.4936);
-
-        function getWeather(latitude, longitude) {
-            var weather = $.ajax("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" + darkSkyKey + "/" + latitude + ',' + longitude);
-            weather.done(function (weather) {
-                // console.log(weather);
-                for (var i = 0; i <= 2; i++) {
-
-                }
-                $('.todayWeather').html(
-                    '<div class="d-flex-col justify-content-center">' +
-                    '<h5 class="d-flex justify-content-center">' + "Current Weather " + '</h5>' +
-                    '<img src="' + weatherType[weather.daily.data[0].icon] + '" class="mt-2" style="width: 50px" height="50px">' +
-                    '<p class="d-flex justify-content-center mt-2">' + weather.currently.temperature + '° F' + '</p>' +
-                    '<p class="d-flex justify-content-center mt-2">' + "The Sky is " + weather.currently.summary + '</p>' +
-                    '<p class="d-flex justify-content-center mt-2">' + "Humidity: " + weather.currently.humidity + "%" + '</p>' +
-                    '<p class="d-flex justify-content-center mt-2">' + "Wind: " + weather.currently.windSpeed + " MPH" + '</p>' +
-                    '<p class="d-flex justify-content-center mt-2">' + "Pressure: " + weather.currently.pressure + '</p>' +
-                    '</div>');
-
-                $('.tomorrowWeather').html(
-                    '<div class="d-flex-col justify-content-center">' +
-                    '<h5 class="d-flex justify-content-center">' + "Tomorrow's Weather " + '</h5>' +
-                    '<img src="' + weatherType[weather.daily.data[1].icon] + '" class="mt-2" style="width: 50px" height="50px">' +
-                    '<p class="d-flex justify-content-center mt-2">' + weather.daily.data[1].temperatureHigh + '° F' + ' / ' + weather.daily.data[1].temperatureLow + '</p>' +
-                    '<p class="d-flex justify-content-center mt-2">' + "The Sky is " + weather.daily.data[1].summary + '</p>' +
-                    '<p class="d-flex justify-content-center mt-2">' + "Humidity: " + weather.daily.data[1].humidity + "%" + '</p>' +
-                    '<p class="d-flex justify-content-center mt-2">' + "Wind: " + weather.daily.data[1].windSpeed + " MPH" + '</p>' +
-                    '<p class="d-flex justify-content-center mt-2">' + "Pressure: " + weather.daily.data[1].pressure + '</p>' +
-                    '</div>');
-
-                $('.nextWeather').html(
-                    '<div class="d-flex-col justify-content-center">' +
-                    '<h5 class="d-flex justify-content-center">' + "Day after Weather " + '</h5>' +
-                    '<img src="' + weatherType[weather.daily.data[2].icon] + '" class="mt-2" style="width: 50px" height="50px">' +
-                    '<p class="d-flex justify-content-center mt-2">' + weather.daily.data[2].temperatureHigh + '° F' + ' / ' + weather.daily.data[2].temperatureLow + '</p>' +
-                    '<p class="d-flex justify-content-center mt-2">' + "The Sky is " + weather.daily.data[2].summary + '</p>' +
-                    '<p class="d-flex justify-content-center mt-2">' + "Humidity: " + weather.daily.data[2].humidity + "%" + '</p>' +
-                    '<p class="d-flex justify-content-center mt-2">' + "Wind: " + weather.daily.data[2].windSpeed + " MPH" + '</p>' +
-                    '<p class="d-flex justify-content-center mt-2">' + "Pressure: " + weather.daily.data[2].pressure + '</p>' +
-                    '</div>');
-            })
-        }
-
-    });
-
-
-    mapboxgl.accessToken = mapBoxToken;
-    // mapboxToken;
+    mapboxgl.accessToken = mapboxToken;
     var map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v9',
-        zoom: 10,
-        center: [-98.4916, 29.4252]
+        style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+        center: [-98.4916, 29.4252] , // starting position [lng, lat]
+        zoom: 9,// starting zoom
+        interactive: true
     });
 
-    map.addControl(
-        new MapboxGeocoder({
-            accessToken: mapboxgl.accessToken,
-            mapboxgl: mapboxgl
+
+    $.get("http://api.openweathermap.org/data/2.5/forecast", {
+        APPID: "4ec0118dbfe987a18702b48653976212",
+        lat: 32.779167,
+        lon: -96.808891,
+        units: "imperial",
+        cnt: 40
+
+
+
+    }).done(function(data){
+        const days = data.list.filter(e=>data.list.indexOf(e)%8===0);
+        console.log(days)
+        days.forEach(day=>{
+            makeCard(day)
         })
-    );
-
-    // var zoomSelect = document.getElementById("zoom-select")
-    // zoomSelect.addEventListener("change", function (event) {
-    //     var zoomValue = zoomSelect.options[zoomSelect.selectedIndex].value
-    //     map.setZoom(parseInt(zoomValue))
-    // })
-    //
-    // var styleSelect = document.getElementById("style-select")
-    // styleSelect.addEventListener("change", function (event) {
-    //     var styleValue = styleSelect.options[styleSelect.selectedIndex].value
-    //     var styleString = "mapbox://styles/mapbox/" + styleValue
-    //     map.setStyle(styleString)
-    // })
-
-    $('#go-getter').click(function (e) {
-        e.preventDefault();
-        var longitude = long.value;
-        var latitude = lat.value;
-
-        reverseGeocode({lng: longitude, lat: latitude}, mapBoxToken).then(function (result) {
-            geocode(result, mapboxToken).then(function (result2) {
-                map.setCenter(result2);
-                map.setZoom(15);
-                var marker = new mapboxgl.Marker()
-                    .setLngLat(result2)
-                    .addTo(map);
-
-            });
-
-
-        });
-        getWeather(lat.value, long.value);
     });
 
-    //TODO: RESET the dropdown to initial option
-    //TODO: RESET style dropdown to initial option
 
+
+
+            // Creating the HTML image element for the forecast icon
+
+            // let iconImage = '<img src="http://openweathermap.org/img/wn/' + data.weather[0].icon + '@2x.png" width="50" height="50"/>';
+
+            // Add the weather icon to the body of the html
+
+            // $("body").append(iconImage);
+
+        // });
 
 </script>
 
+<script src="js/keys.js"></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js'></script>
 
-<!--    Mapbox information-->
+<script src="js/mapbox-geocoder-utils.js"></script>
+<!--<script src="js/mapbox_maps_api.js"></script>-->
 
-<!--<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js"></script>-->
-</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
 </body>
 </html>

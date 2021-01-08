@@ -68,3 +68,5 @@ function makeCard(info){
     wrapperCard.appendChild(card);
 }
 
+
+

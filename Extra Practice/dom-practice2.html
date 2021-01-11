@@ -45,10 +45,18 @@
     <li>Third item</li>
 </ul>
 
+
+<ul id = "hl-toggle">
+    <li>a</li>
+    <li>b</li>
+    <li>c</li>
+</ul>
+
 <p id="thundercats"><span>Thunder</span> <span>Thunder</span> <span>Thundercats</span> <span>HOOOOOOOO!!!!!!</span></p>
 <button id="get-hype">Get Hype</button>
 </body>
 
+<script src="js/jquery-2.2.4.js"></script>
 <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
 <!-- <script src="assessment-three-review.js"></script> -->
 <script>
@@ -151,17 +159,17 @@
 
     //hard mode for this one below
 
-    function moveLIs(){
-
-        var whatWasClicked = $(this).text();
-
-        $(this).remove();
-
-        $("#add-to-me").prepend("<li>" + whatWasClicked + "</li>");
-
-        $("#add-to-me").children().first().bind('click', moveLIs);
-
-    }
+    // function moveLIs(){
+    //
+    //     var whatWasClicked = $(this).text();
+    //
+    //     $(this).remove();
+    //
+    //     $("#add-to-me").prepend("<li>" + whatWasClicked + "</li>");
+    //
+    //     $("#add-to-me").children().first().bind('click', moveLIs);
+    //
+    // }
 
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -202,23 +210,24 @@
     //
     // });
 
+    // $("#get-hype").click(function(){
+    //     $("#thundercats").css("font-weight", "bold")// can also use the p element where #thundercats id is!!!
+    // });
+
     //hard mode for this one below
     var counter = 1;
 
-    $("#get-hype").click( function () {
+    $("#get-hype").click(function(){
+        $("#thundercats span:nth-child(" + counter + ")").css("font-weight", "bold");//grabs the first child
 
-        $('#thundercats span:nth-child(" + counter + ")').css("font-weight", "bold");
-        $("#thundercats span:nth-child(" + counter + ")").css("font-weight", "bold");
-
-        counter++;
-
+        counter++;//second click moves to the second child
     })
 
     // When a list item inside of the ul with the id of hl-toggle is first clicked, the background of the li that was clicked should change to yellow. When a list item that has a yellow background is clicked, the background should change back to the original background.
     var count = 0;
     var li = $("#hl-toggle").children();
 
-    $(li).click(function () {
+    $(li).hover(function () {
         count ++;
         console.log(count);
         if (count % 2 !== 0) {

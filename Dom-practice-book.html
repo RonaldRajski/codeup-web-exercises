@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom Practice book</title>
+</head>
+<body>
+    <h1>Dom-book-practice</h1>
+
+<script>
+    // Iffe
+    (function (){
+
+        // set interval
+
+        let count = 0;
+        let max = 10;
+        let interval = 5000;
+
+        var intervalID = setInterval(function (){
+            if(count >= max){
+                clearInterval(intervalID);
+                console.log("all done");
+            }
+            else {
+                count++
+                console.log("Repeating this line" + count);
+            }
+        }, interval);
+
+
+        var delay = 5000;
+
+        var timeoutId = setTimeout(function (){
+            alert('Here is the delayed hello!')
+        }, delay);
+
+
+        // var timeoutId = setTimeout(function (){
+        //     window.location = 'http://www.google.com';
+        // }, delay);
+
+
+
+
+
+
+    })();
+
+
+</script>
+
+</body>
+</html>
